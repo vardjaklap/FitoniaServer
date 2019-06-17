@@ -10,7 +10,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            socket: io('http://localhost:4001')
+            socket: io('http://localhost:5000')
         }
     }
     myCallback = (command, data) => {

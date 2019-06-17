@@ -1,35 +1,48 @@
-const express = require('express');
+require('./components/db/mongoose');
+
+const User = require('./components/models/user')
+
 const path = require('path');
-//const generatePassword = require('password-generator');
-
+const http = require('http');
+const express = require('express');
+const socketio = require('socket.io');
+// Create the Express application
 const app = express();
-
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-// Put all API endpoints under '/api'
-app.get('/api/passwords', (req, res) => {
-    const count = 5;
-
-    // Generate some passwords
-
-
-    const obj = {
-        name: "l"
-    }
-    // Return them as json
-    res.json(obj);
-
-    console.log(`Sent ${count} passwords`);
-});
-
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/build/index.html'));
-});
-
+// Create the HTTP server using the Express app
+const server = http.createServer(app);
+// Connect socket.io to the HTTP server
+const io = socketio(server);
 const port = process.env.PORT || 5000;
-app.listen(port);
+app.use(express.static(path.join(__dirname, 'client/build')));
+// Listen for new connections to Socket.io
+io.on('connection', function(socket){
+    console.log('a user connected');
+    socket.on('disconnect', function(){
+        console.log('user disconnected');
+    });
+    socket.on('login',async function(loginfo){
+        try {
+            await User.findByCredentials(loginfo.email, loginfo.pass);
+            socket.emit('alert', 'User logged successfully!')
+        } catch (e) {
+            socket.emit('alert', 'Error!')
+        }
 
-console.log(`Password generator listening on ${port}`);
+    });
+    socket.on('register', async function (info) {
+        try {
+            await User.createUser(info);
+            socket.emit('alert', 'User registered successfully!')
+        } catch (e) {
+            socket.emit('alert', 'Error! User exists!')
+        }
+
+
+
+
+    })
+});
+server.listen(port, () => {
+    console.log(`Server is up on port ${port}!`)
+});
+
