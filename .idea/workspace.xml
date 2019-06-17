@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App/pages/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App/pages/List.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +105,11 @@
               <item name="fitonia" type="b2602c69:ProjectViewProjectNode" />
               <item name="fitonia" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="fitonia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fitonia" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -151,12 +148,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560739458410</updated>
-      <workItem from="1560739460091" duration="4151000" />
+      <workItem from="1560739460091" duration="4422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4151000" />
+    <option name="totallyTimeSpent" value="4422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
