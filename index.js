@@ -14,6 +14,12 @@ const server = http.createServer(app);
 const io = socketio(server);
 const port = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, 'client/build')));
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/client/build/index.html'));
+});
+
 // Listen for new connections to Socket.io
 io.on('connection', function(socket){
     console.log('a user connected');
