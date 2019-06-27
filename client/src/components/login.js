@@ -62,8 +62,8 @@ class Login extends Component {
         e.preventDefault();
         if(this.validateForm()){
             let info = {
-                email: this.state.email,
-                pass: this.state.pass
+                email: this.state.email.value,
+                pass: this.state.pass.value
             };
             this.props.callBackFromParent('login', info);
         }
