@@ -32,18 +32,21 @@ const userSchema = new mongoose.Schema({
 userSchema.statics.findByCredentials = async (email, password) => {
     const user = await User.findOne({ email });
     if (!user) {
-        console.log("user not found")
+        console.log("user not found");
         throw new Error('Unable to login')
     }
     const isMatch = await bcrypt.compare(password, user.pass)
     if (!isMatch) {
-        console.log("password is wrong")
+        console.log("Wrong password or username!")
         throw new Error('Unable to login')
     }
 
     return user
 };
 userSchema.statics.createUser = async (info) => {
+    if(!validator.isEmail(info.email)){
+        throw new Error('Email is incorrect!')
+    }
     const user = await User.findOne({ email: info.email });
     if(!user){
         const hashedPass = await bcrypt.hash(info.pass, 8);
@@ -54,14 +57,14 @@ userSchema.statics.createUser = async (info) => {
             pass: hashedPass
         });
         testUser.save().then(() => {
-            console.log('User created!')
+            console.log('User created!');
             return "User created!"
         }).catch((e) => {
 
         });
     }else{
         console.log('User exists!')
-        throw new Error('User exists!')
+        throw new Error('User already exists!')
     }
 
 

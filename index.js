@@ -29,18 +29,18 @@ io.on('connection', function(socket){
     socket.on('login',async function(loginfo){
         try {
             await User.findByCredentials(loginfo.email, loginfo.pass);
-            socket.emit('alert', 'User logged successfully!')
+            socket.emit('alert', 'success', 'User logged in successfully!')
         } catch (e) {
-            socket.emit('alert', 'Error!')
+            socket.emit('alert', 'error', 'Wrong password or username!')
         }
 
     });
     socket.on('register', async function (info) {
         try {
             await User.createUser(info);
-            socket.emit('alert', 'User registered successfully!')
+            socket.emit('alert','success', 'User registered successfully!')
         } catch (e) {
-            socket.emit('alert', 'Error! User exists!')
+            socket.emit('alert','error', e.message)
         }
 
 
