@@ -65,6 +65,7 @@ class Hydration extends Component {
         this.sendTheme();
     }
     componentWillReceiveProps(nextProps, nextContext) {
+        console.log(nextProps);
         this.setState({
             waterAmount: nextProps.userData.dateData.water.amount,
             percent: Math.round(nextProps.userData.dateData.water.amount * 100 / 3000)

@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/frontpage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/registrationpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/registrationpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/register-server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +80,7 @@
       <workItem from="1564350426676" duration="4202000" />
       <workItem from="1564591033853" duration="4355000" />
       <workItem from="1564767367327" duration="3964000" />
+      <workItem from="1564846301265" duration="1885000" />
     </task>
     <servers />
   </component>

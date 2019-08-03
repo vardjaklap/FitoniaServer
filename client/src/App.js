@@ -57,7 +57,7 @@ class App extends Component {
                 {this.state.authorized ? (
                     <Redirect to="/app"/>
                 ) :(
-                    <Redirect to="/login"/>
+                    <div></div>
                 )}
 
                 <Unauth callBackFromParent={this.myCallback} />

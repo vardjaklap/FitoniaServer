@@ -31,8 +31,10 @@ io.on('connection', function(socket){
             const user = await User.findByCredentials(loginfo.email, loginfo.pass);
             const token = await user.generateAuthToken();
             socket.emit('newToken', token);
-            socket.emit('authorize', user);
+            const userInfo = await auth(token);
+            socket.emit('authorize', userInfo);
             socket.emit('alert', 'success', 'User logged in successfully!');
+            console.log('User ' + loginfo.email + ' logged in successfully!')
         } catch (e) {
             socket.emit('alert', 'error', 'Wrong password or username!')
         }
@@ -65,13 +67,6 @@ io.on('connection', function(socket){
             socket.emit('alert','error', e.message)
         }
     });
-    // socket.on('updateValue', async function(keyValue){
-    //     try{
-    //
-    //     }catch(e){
-    //         socket.emit('alert','error', 'Error while updating! Please reload!')
-    //     }
-    // })
 });
 server.listen(port, () => {
     console.log(`Server is up on port ${port}!`)
