@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -26,8 +27,71 @@ const userSchema = new mongoose.Schema({
     pass: {
         type: String,
         required: true
-    }
+    },
+    tokens: [{
+        token: {
+            type: String,
+            required: true
+        }
+}],
+    entries: [{
+        date: {
+            type: Date,
+            unique: true,
+            required: true
+        },
+        tr: {
+            completed: {
+                type: Boolean
+            }
+        },
+        nt: {
+            message: {
+                type: String
+            }
+        },
+        nutr: {
+            cal: {
+                type: Number
+            },
+            prot: {
+                type: Number
+            },
+            fat: {
+                type: Number
+            },
+            carb: {
+                type: Number
+            }
+        },
+        sl: {
+            dur: {
+                type: Number
+            },
+            quality: {
+                type: Number
+            },
+            note: {
+                type: String
+            }
+        },
+        water: {
+            amount: {
+                type: Number
+            }
+        }
+    }]
 });
+
+userSchema.methods.generateAuthToken = async function () {
+    const user = this;
+    const token = jwt.sign({ _id: user._id.toString() }, 'tothinkistoexist', { expiresIn: '1 day' });
+
+    user.tokens = user.tokens.concat({ token });
+    await user.save();
+
+    return token
+};
 
 userSchema.statics.findByCredentials = async (email, password) => {
     const user = await User.findOne({ email });
@@ -35,9 +99,9 @@ userSchema.statics.findByCredentials = async (email, password) => {
         console.log("user not found");
         throw new Error('Unable to login')
     }
-    const isMatch = await bcrypt.compare(password, user.pass)
+    const isMatch = await bcrypt.compare(password, user.pass);
     if (!isMatch) {
-        console.log("Wrong password or username!")
+        console.log("Wrong password or username!");
         throw new Error('Unable to login')
     }
 
@@ -69,6 +133,21 @@ userSchema.statics.createUser = async (info) => {
 
 
 };
+
+userSchema.statics.loadCurrentDate = async () => {
+    const user = this;
+    console.log(user);
+
+
+}
+userSchema.methods.updateInfo = async function (values) {
+    const user = this;
+    if(values.water){
+        user.entries[user.entries.length - 1].water.amount = values.water;
+    }
+    await user.save();
+
+}
 
 const User = mongoose.model('User', userSchema);
 

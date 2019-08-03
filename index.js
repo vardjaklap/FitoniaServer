@@ -1,7 +1,7 @@
 require('./components/db/mongoose');
 
+const {auth, verifyAuth} = require('./components/authorize');
 const User = require('./components/models/user')
-
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -28,8 +28,11 @@ io.on('connection', function(socket){
     });
     socket.on('login',async function(loginfo){
         try {
-            await User.findByCredentials(loginfo.email, loginfo.pass);
-            socket.emit('alert', 'success', 'User logged in successfully!')
+            const user = await User.findByCredentials(loginfo.email, loginfo.pass);
+            const token = await user.generateAuthToken();
+            socket.emit('newToken', token);
+            socket.emit('authorize', user);
+            socket.emit('alert', 'success', 'User logged in successfully!');
         } catch (e) {
             socket.emit('alert', 'error', 'Wrong password or username!')
         }
@@ -42,11 +45,33 @@ io.on('connection', function(socket){
         } catch (e) {
             socket.emit('alert','error', e.message)
         }
-
-
-
-
-    })
+    });
+    socket.on('isAuth', async function(token){
+        try{
+            const user = await auth(token);
+            socket.emit('authorize', user);
+            socket.emit('alert', 'warning', 'You are authorized!');
+            socket.on('updateValue', async function(keyValue){
+                try{
+                    const user = await verifyAuth(token);
+                    await user.updateInfo(keyValue);
+                    socket.emit('alert', 'success', 'Updated!')
+                }catch(e){
+                    socket.emit('alert','error', 'Error while updating! Please reload!');
+                    socket.emit('reload');
+                }
+            })
+        }catch (e) {
+            socket.emit('alert','error', e.message)
+        }
+    });
+    // socket.on('updateValue', async function(keyValue){
+    //     try{
+    //
+    //     }catch(e){
+    //         socket.emit('alert','error', 'Error while updating! Please reload!')
+    //     }
+    // })
 });
 server.listen(port, () => {
     console.log(`Server is up on port ${port}!`)
