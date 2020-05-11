@@ -20,7 +20,9 @@ class App extends Component {
         this.logout = this.logout.bind(this);
     }
     myCallback = (command, data) => {
+        // console.log(command, data)
         this.state.socket.emit(command, data);
+
     }
     componentDidMount() {
         socketMethods.checkLog();
@@ -29,7 +31,7 @@ class App extends Component {
                 authorized: true,
                 user
             });
-            console.log(user);
+            // console.log(user);
 
         });
         this.state.socket.on('alert', (type, message)=>{
@@ -41,7 +43,7 @@ class App extends Component {
             }, 1000);
         });
 
-        console.log(this.state.authorized)
+        // console.log(this.state.authorized)
     }
     logout(){
         socketMethods.logout();
@@ -54,16 +56,20 @@ class App extends Component {
         return (
             <Router>
                 <Snack ref="snack" message={this.state.mess}/>
-                {this.state.authorized ? (
-                    <Redirect to="/app"/>
-                ) :(
-                    <div></div>
-                )}
-
                 <Unauth callBackFromParent={this.myCallback} />
                 <MainApp callBackFromParent={this.myCallback} userData={this.state.user} test={this.logout}>
-
                 </MainApp>
+
+                <Route path="/" render={(props) => (
+                    this.state.authorized === true
+                        ? <Redirect to="/app"/>
+                        : <div></div>
+                )} />
+                <Route path="/app" render={(props) => (
+                    this.state.authorized === false
+                        ? <Redirect to="/"/>
+                        : <div></div>
+                )} />
             </Router>
         )};
 }

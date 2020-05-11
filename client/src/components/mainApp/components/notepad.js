@@ -7,6 +7,9 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import RestoreIcon from '@material-ui/icons/Restore';
 import AddBox from '@material-ui/icons/AddBox';
 import Fade from '@material-ui/core/Fade';
+import DateRangeIcon from '@material-ui/icons/DateRange';
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
 
 const styles = {
     Paper: {
@@ -67,13 +70,24 @@ class Notepad extends Component {
         return (
             <Fade in={this.state.checked}>
                 <section id="Nutrition" >
-                        <Grid container justify="center">
-                            <Grid item xs={10}>
-                                <Paper style={styles.Paper}>
-
-                                </Paper>
+                    <Container>
+                        <Grid container  direction="column"
+                              justify="center"
+                              alignItems="center" style={{height: "80vh"}}>
+                            <Grid item>
+                                <DateRangeIcon style={{fontSize: "300px"}} color="disabled" />
                             </Grid>
+                            <Grid item>
+                                <Typography variant="h2" style={{color: "grey"}}>
+                                    I am not finished yet.
+                                </Typography>
+                                <Typography variant="h2" style={{color: "grey"}}>
+                                    Come check next time ;)
+                                </Typography>
+                            </Grid>
+
                         </Grid>
+                    </Container>
                         <Paper style={styles.footer}>
                             <BottomNavigation>
                                 <BottomNavigationAction label="Recent" icon={<RestoreIcon />} />

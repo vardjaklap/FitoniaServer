@@ -26,6 +26,7 @@ io.on('connection', function(socket){
     socket.on('disconnect', function(){
         console.log('user disconnected');
     });
+    let currentToken;
     socket.on('login',async function(loginfo){
         try {
             const user = await User.findByCredentials(loginfo.email, loginfo.pass);
@@ -34,7 +35,8 @@ io.on('connection', function(socket){
             const userInfo = await auth(token);
             socket.emit('authorize', userInfo);
             socket.emit('alert', 'success', 'User logged in successfully!');
-            console.log('User ' + loginfo.email + ' logged in successfully!')
+            console.log('User ' + loginfo.email + ' logged in successfully!');
+            currentToken = token;
         } catch (e) {
             socket.emit('alert', 'error', 'Wrong password or username!')
         }
@@ -48,21 +50,33 @@ io.on('connection', function(socket){
             socket.emit('alert','error', e.message)
         }
     });
+    socket.on('updateProfile', async function (info) {
+        try{
+            const user = await User.findByCredentials(info.email, info.pass);
+            await user.updateProfile(info);
+            socket.emit('alert','success', "Profile updated!")
+        }catch (e) {
+            socket.emit('alert','error', e.message)
+        }
+
+
+    });
+    socket.on('updateValue', async function(keyValue){
+        try{
+            const user = await verifyAuth(currentToken);
+            await user.updateInfo(keyValue);
+            socket.emit('alert', 'success', 'Updated!')
+        }catch(e){
+            socket.emit('alert','error', 'Error while updating! Please reload!');
+            socket.emit('reload');
+        }
+    });
     socket.on('isAuth', async function(token){
         try{
             const user = await auth(token);
             socket.emit('authorize', user);
             socket.emit('alert', 'warning', 'You are authorized!');
-            socket.on('updateValue', async function(keyValue){
-                try{
-                    const user = await verifyAuth(token);
-                    await user.updateInfo(keyValue);
-                    socket.emit('alert', 'success', 'Updated!')
-                }catch(e){
-                    socket.emit('alert','error', 'Error while updating! Please reload!');
-                    socket.emit('reload');
-                }
-            })
+            currentToken = token;
         }catch (e) {
             socket.emit('alert','error', e.message)
         }

@@ -2,12 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/trainingData/barbell.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/trainingData/close-grip-bench-press_-_step_1.max_.v1-e1368126860566.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/trainingData/exercises.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/resources/logoBig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/resources/logoBogTransparent.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/meditation.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/meditation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/notepad.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/notepad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutrition.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutrition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/sleep.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/sleep.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/training.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/waterComponents/waterHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/waterComponents/waterHistory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/registrationpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/registrationpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/unauth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/unauth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/socket.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/socket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/models/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,34 +44,33 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1OWI48XiwITjLAjcScuHgRQSiWQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.3.1" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/fitonia2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/mainApp/components/trainingData" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vardjaklap\Documents\Programming\node\fitonia\client\src\components\mainApp\components\trainingData" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vardjaklap\Documents\Programming\node\fitonia\client\src\components\unAuth" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -80,7 +103,52 @@
       <workItem from="1564350426676" duration="4202000" />
       <workItem from="1564591033853" duration="4355000" />
       <workItem from="1564767367327" duration="3964000" />
-      <workItem from="1564846301265" duration="1885000" />
+      <workItem from="1564846301265" duration="3518000" />
+      <workItem from="1565210112126" duration="5193000" />
+      <workItem from="1565466027640" duration="1340000" />
+      <workItem from="1566152527760" duration="7550000" />
+      <workItem from="1566247220657" duration="2842000" />
+      <workItem from="1566595135191" duration="673000" />
+      <workItem from="1567512814849" duration="750000" />
+      <workItem from="1567515356379" duration="22000" />
+      <workItem from="1568820772312" duration="184000" />
+      <workItem from="1569716449063" duration="643000" />
+      <workItem from="1569813811899" duration="1210000" />
+      <workItem from="1570539039277" duration="186000" />
+      <workItem from="1570629672330" duration="166000" />
+      <workItem from="1571332631166" duration="613000" />
+      <workItem from="1571523546987" duration="645000" />
+      <workItem from="1571614304700" duration="737000" />
+      <workItem from="1571709152467" duration="1094000" />
+      <workItem from="1571780741434" duration="3632000" />
+      <workItem from="1571786293152" duration="3848000" />
+      <workItem from="1571941243106" duration="304000" />
+      <workItem from="1572354801821" duration="11000" />
+      <workItem from="1573053387234" duration="615000" />
+      <workItem from="1574216299356" duration="987000" />
+      <workItem from="1574218186279" duration="1633000" />
+      <workItem from="1574266337928" duration="245000" />
+      <workItem from="1574266773552" duration="182000" />
+      <workItem from="1575311617936" duration="688000" />
+      <workItem from="1575647483559" duration="2823000" />
+      <workItem from="1576174820475" duration="674000" />
+      <workItem from="1577578416073" duration="287000" />
+      <workItem from="1583262669158" duration="232000" />
+      <workItem from="1583262965250" duration="1304000" />
+      <workItem from="1583426729089" duration="8408000" />
+      <workItem from="1583861861374" duration="1228000" />
+      <workItem from="1583953177903" duration="1287000" />
+      <workItem from="1584035631332" duration="430000" />
+      <workItem from="1584825620799" duration="2235000" />
+      <workItem from="1584889857759" duration="711000" />
+      <workItem from="1585414485038" duration="3428000" />
+      <workItem from="1585432073262" duration="6729000" />
+      <workItem from="1585846392655" duration="647000" />
+      <workItem from="1586731986713" duration="392000" />
+      <workItem from="1588727787063" duration="1259000" />
+      <workItem from="1588951708461" duration="4142000" />
+      <workItem from="1589139657176" duration="823000" />
+      <workItem from="1589210797467" duration="2405000" />
     </task>
     <servers />
   </component>
@@ -101,20 +169,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/client" />
     </ignored-roots>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/src/components/mainApp/components/layouts/drawer.js</url>
-          <line>95</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="WindowStateProjectService">
+    <state x="409" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585433797495">
+      <screen x="0" y="0" width="1920" height="1030" />
+    </state>
+    <state x="409" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1030@0.0.1920.1030" timestamp="1585433797495" />
+    <state x="686" y="207" key="FileChooserDialogImpl" timestamp="1586732000392">
+      <screen x="0" y="0" width="1920" height="1030" />
+    </state>
+    <state x="686" y="207" key="FileChooserDialogImpl/0.0.1920.1030@0.0.1920.1030" timestamp="1586732000392" />
+    <state x="436" y="192" key="IDE.errors.dialog" timestamp="1583455346383">
+      <screen x="0" y="0" width="1920" height="1030" />
+    </state>
+    <state x="436" y="192" key="IDE.errors.dialog/0.0.1920.1030@0.0.1920.1030" timestamp="1583455346383" />
+    <state x="344" y="54" key="SettingsEditor" timestamp="1583863575026">
+      <screen x="0" y="0" width="1920" height="1030" />
+    </state>
+    <state x="344" y="54" key="SettingsEditor/0.0.1920.1030@0.0.1920.1030" timestamp="1583863575026" />
+    <state x="226" y="0" key="new project wizard" timestamp="1585846437600">
+      <screen x="0" y="0" width="1920" height="1030" />
+    </state>
+    <state x="226" y="0" key="new project wizard/0.0.1920.1030@0.0.1920.1030" timestamp="1585846437600" />
   </component>
   <component name="masterDetails">
     <states>

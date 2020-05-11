@@ -1,0 +1,75 @@
+{
+  "chest": [
+    {
+      "id": 0,
+      "name": "Barbell bench press",
+      "image": "https://upl.stack.com/wp-content/uploads/2013/05/close-grip-bench-press_-_step_1.max_.v1-e1368126860566.png",
+      "desc": "Position yourself on the bench with your feet firmly on the ground and your back flat (the bar should be directly over your eyes, and your head, shoulders, and buttocks should be on the bench)",
+      "difficulty": 1
+    }
+  ],
+  "biceps": [
+    {
+      "id": 0,
+      "name": "Concentration curl",
+      "image": "https://bodybuilding-wizard.com/wp-content/uploads/2014/04/dumbbell-concentration-curls-2-1-1.jpg",
+      "desc": "Sit on the bench, spreading your legs. Rest your arm holding the dumbbell on the same side leg, just below the knee, so that the weight hangs down between your legs. Keep your torso upright by stabilizing your off-hand on your thigh. Curl the weight up, focusing on squeezing the bicep, pause at the top, then lower back into the original position.",
+      "difficulty": 3
+    }
+  ],
+  "core": [
+    {
+      "id": 0,
+      "name": "V-up",
+      "image": "https://post.greatist.com/wp-content/uploads/sites/2/2019/05/VUps_0.jpg",
+      "desc": "Lie faceup with legs and arms extended forward. Keeping knees and elbows locked, simultaneously raise upper body and lower body while trying to touch fingers to toes.",
+      "difficulty": 2
+    }
+  ],
+  "quads": [
+    {
+      "id": 0,
+      "name": "Mobility Warmup",
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/couch-stretch-1478755774.jpg",
+      "desc": "Do a couch stretch for for 2 to 5 minutes on each side.",
+      "difficulty": 0
+    }
+  ],
+  "shoulders": [
+    {
+      "id": 0,
+      "name": "Barbell push press",
+      "image": "https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/16x9_480/public/2016/05/push_press_main.jpg?itok=vsa9ETj5&timestamp=1463068286",
+      "desc": "Grab a barbell and hold it at shoulder height with palms facing forwards. Set your feet shoulder width apart and slightly bend your knees to inititate the move. Push up with your legs to explosively press the barbell straight above your head. Return under control to the start position.",
+      "difficulty": 2
+    }
+  ],
+  "triceps": [    {
+    "id": 0,
+    "name": "Diamond Push-ups",
+    "image": "https://www.verywellfit.com/thmb/I2N7KmqOjn3FudNrq8jkR2D4lEk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/making-a-concerted-effort-to-get-fit-498334765-5aa988e5ae9ab80037feb6ac.jpg",
+    "desc": "Begin the move by positioning the hands on the mat directly under the chest with the fingers spread and the thumbs and forefingers touching, making a diamond shape.",
+    "difficulty": 2
+  }],
+  "back": [    {
+    "id": 0,
+    "name": "Dumbbell Romanian Deadlift",
+    "image": "https://www.mensjournal.com/wp-content/uploads/2018/03/main_dbdeadlft.jpg?w=800",
+    "desc": "Grasp two dumbbells and hold them with feet set hip-width apart. Keeping your lower back in its natural arch, bend hips back, your torso forward, and lower yourself until you feel a stretch in your hamstrings. You may bend at the knees. Squeeze your glutes at the top of the movement after coming back up.",
+    "difficulty": 1
+  }],
+  "glutes": [    {
+    "id": 0,
+    "name": "Walking Single-Leg Romanian Deadlift",
+    "image": "https://www.mensjournal.com/wp-content/uploads/2018/04/1380-walking-single-leg-rdl.jpg?w=800",
+    "desc": "Hold a dumbbell in each hand and take a step forward with your left leg so you’re in a split-stance position. Keeping your front knee slightly bent, bend at the hips as far as you can without losing the arch in your lower back. Fire your glutes to straighten your torso as you step forward to begin the next step.",
+    "difficulty": 2
+  }],
+  "calves": [    {
+    "id": 0,
+    "name": "Barbell push press",
+    "image": "https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/16x9_480/public/2016/05/push_press_main.jpg?itok=vsa9ETj5&timestamp=1463068286",
+    "desc": "Grab a barbell and hold it at shoulder height with palms facing forwards. Set your feet shoulder width apart and slightly bend your knees to inititate the move. Push up with your legs to explosively press the barbell straight above your head. Return under control to the start position.",
+    "difficulty": 2
+  }]
+}

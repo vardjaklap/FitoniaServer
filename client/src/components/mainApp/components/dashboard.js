@@ -10,13 +10,14 @@ import Fade from '@material-ui/core/Fade';
 import Typography from "@material-ui/core/Typography";
 import Create from '@material-ui/icons/Create';
 import ReportProblem from '@material-ui/icons/ReportProblem';
+import Toolbar from "@material-ui/core/Toolbar";
+import AppBar from "@material-ui/core/AppBar";
 
 
 
 const styles = {
     Paper: {
-        marginTop: "40px",
-        padding: "20px"
+        marginTop: "40px"
     }
 };
 
@@ -72,18 +73,18 @@ class Dashboard extends Component {
                 <div>
                     <Container>
                         <Grid container justify="center" spacing={10}>
-                            <Grid item md={4}>
+                            <Grid item md={3}>
                                 <Paper style={styles.Paper}>
                                     <div>
                                         <Typography>Training</Typography>
-                                        <ReportProblem  style={{fontSize: '4rem', color: 'grey'}} />
+                                        <Create  style={{fontSize: '4rem', color: 'grey'}} />
                                         <Typography>
-                                            Not started
+                                            In progress
                                         </Typography>
                                     </div>
                                 </Paper>
                             </Grid>
-                            <Grid item md={4}>
+                            <Grid item md={3}>
                                 <Paper style={styles.Paper}>
                                     <div >
                                         <Typography>Notepad</Typography>
@@ -94,7 +95,7 @@ class Dashboard extends Component {
                                     </div>
                                 </Paper>
                             </Grid>
-                            <Grid item md={4}>
+                            <Grid item md={3}>
                                 <Paper style={styles.Paper}>
                                     <div>
                                         <Typography>Nutrition</Typography>
@@ -105,7 +106,7 @@ class Dashboard extends Component {
                                     </div>
                                 </Paper>
                             </Grid>
-                            <Grid item md={4}>
+                            <Grid item md={3}>
                                 <Paper style={styles.Paper}>
                                     <div>
                                         <Typography>Hydration</Typography>
@@ -116,7 +117,7 @@ class Dashboard extends Component {
                                     </div>
                                 </Paper>
                             </Grid>
-                            <Grid item md={4}>
+                            <Grid item md={3}>
                                 <Paper style={styles.Paper}>
                                     <div >
                                         <Typography>Sleep</Typography>
@@ -127,7 +128,7 @@ class Dashboard extends Component {
                                     </div>
                                 </Paper>
                             </Grid>
-                            <Grid item md={4}>
+                            <Grid item md={3}>
                                 <Paper style={styles.Paper}>
                                     <div >
                                         <Typography>Meditation</Typography>

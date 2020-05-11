@@ -13,6 +13,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Face from "@material-ui/icons/Face";
 import Avatar from "@material-ui/core/Avatar";
 import {pink} from "@material-ui/core/colors";
+import ArrowBack from "@material-ui/icons/ArrowBack";
+import IconButton from "@material-ui/core/IconButton";
 
 const styles = {
     paper: {
@@ -122,6 +124,9 @@ class RegistrationPage extends Component {
             <div >
                 <AppBar position="static" color="primary">
                     <Toolbar>
+                        <IconButton href="/" aria-label="back" color="inherit">
+                            <ArrowBack fontSize="large" />
+                        </IconButton>
                         <Typography variant="h6" color="inherit">
                             Sign up
                         </Typography>
@@ -208,7 +213,7 @@ class RegistrationPage extends Component {
                                         <FormControlLabel
                                             onChange={(e) => {this.setState({checkbox: e.target.checked})}}
                                             control={<Checkbox color="primary" />}
-                                            label="I want to sell my soul."
+                                            label="I want to test this application!"
                                         />
                                     </Grid>
                                 </Grid>

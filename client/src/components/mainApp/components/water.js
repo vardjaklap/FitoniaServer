@@ -65,10 +65,16 @@ class Hydration extends Component {
         this.sendTheme();
     }
     componentWillReceiveProps(nextProps, nextContext) {
-        console.log(nextProps);
+        // console.log(nextProps);
+        let newPercent;
+        if(Math.round(nextProps.userData.dateData.water.amount * 100 / 3000) > 100){
+            newPercent = 100;
+        }else{
+            newPercent = Math.round(nextProps.userData.dateData.water.amount * 100 / 3000);
+        }
         this.setState({
             waterAmount: nextProps.userData.dateData.water.amount,
-            percent: Math.round(nextProps.userData.dateData.water.amount * 100 / 3000)
+            percent: newPercent
         });
     }
 
@@ -89,11 +95,12 @@ class Hydration extends Component {
         this.setState({
             percent: newValue,
             waterAmount: this.state.waterAmount + amount
-        })
+        });
         setTimeout(() => {
             console.log(this.state.waterAmount);
             this.props.command("updateValue", {"water": this.state.waterAmount});
         }, 1)
+
 
     }
     handle100(){

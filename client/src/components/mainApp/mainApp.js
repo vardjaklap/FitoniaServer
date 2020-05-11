@@ -9,7 +9,7 @@ import Sleep from "./components/sleep";
 import Meditation from "./components/meditation";
 import Profile from './components/profile'
 import {  Route } from "react-router-dom";
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import {createMuiTheme} from "@material-ui/core";
 
 import red from '@material-ui/core/colors/red';
@@ -45,33 +45,33 @@ export class MainApp extends Component {
         let newColor;
         let newTitle;
         if(dataFromChild === "green"){
-            newColor = teal;
+            newColor = teal[500];
             newTitle = "Nutrition";
         }else if(dataFromChild === "blue"){
-            newColor = blue;
+            newColor = blue[500];
             newTitle = "Hydration";
         }else if(dataFromChild === "red"){
-            newColor = red;
+            newColor = red[400];
             newTitle = "Dashboard";
         }else if(dataFromChild === "orange"){
-            newColor = orange;
+            newColor = orange[500];
             newTitle = "Training";
         }else if(dataFromChild === "yellow"){
-            newColor = yellow;
+            newColor = yellow[500];
             newTitle = "Notepad";
         }else if(dataFromChild === "indigo"){
-            newColor = indigo;
+            newColor = indigo[500];
             newTitle = "Sleep";
         }else if(dataFromChild === "deepPurple"){
-            newColor = deepPurple;
+            newColor = deepPurple[500];
             newTitle = "Meditation";
         }else if(dataFromChild === "profile"){
-            newColor = deepPurple;
+            newColor = deepPurple[500];
             newTitle = "Profile";
         }
         let newTheme = createMuiTheme({
             palette: {
-                primary: newColor
+                primary: {main: newColor}
                 // type: "dark"
             },
             typography: {
@@ -105,8 +105,7 @@ export class MainApp extends Component {
                             <Route key="/app/hydration" exact={true} path="/app/hydration" render={() => <Hydration command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>} />
                             <Route key="/app/sleep" exact={true} path="/app/sleep" render={() => <Sleep callBackFromParent={this.myCallback} userData={this.props.userData}/>} />
                             <Route key="/app/meditation" exact={true} path="/app/meditation" render={() => <Meditation callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
-                            <Route key="/app/profile" exact={true} path="/app/profile" render={() => <Profile callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
-
+                            <Route key="/app/profile" exact={true} path="/app/profile" render={() => <Profile command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
                         </div>
                     </CssBaseline>
                 </MuiThemeProvider>

@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import Paper from '@material-ui/core/Paper';
-
 import Grid from '@material-ui/core/Grid';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@material-ui/icons/Restore';
-import AddBox from '@material-ui/icons/AddBox';
 import Fade from '@material-ui/core/Fade';
+import Typography from "@material-ui/core/Typography";
+
+import Container from "@material-ui/core/Container";
+import SpaIcon from '@material-ui/icons/Spa';
 
 
 
 const styles = {
     Paper: {
-        padding: "20px",
-        marginTop: "20px",
-        marginBottom: "10px"
+        // padding: "20px",
+        marginTop: "10px",
+        textAlign: "left"
     },
     footer: {
         position: "fixed",
@@ -35,6 +33,15 @@ const styles = {
     }
 
 }
+function createData(name, calories, fat, carbs, protein) {
+    return { name, calories, fat, carbs, protein };
+}
+const rows = [
+    createData('December, 16', 30.2, 12.2, 24.3, 12.3),
+    createData('December, 15', 29.8, 12.6, 27.6, 12.3),
+    createData('December, 14', 29.6, 12.3, 24.7, 12.2),
+    createData('December, 13', 30.3, 14.3, 27.1, 12.5),
+];
 
 class Meditation extends Component {
     constructor(props) {
@@ -68,20 +75,25 @@ class Meditation extends Component {
     render() {
         return (
             <Fade in={this.state.checked}>
-                <section id="Nutrition" >
-                        <Grid container justify="center">
-                            <Grid item xs={10}>
-                                <Paper style={styles.Paper}>
+                <section id="Meditation" >
+                        <Container>
+                            <Grid container  direction="column"
+                                  justify="center"
+                                  alignItems="center" style={{height: "80vh"}}>
+                                <Grid item>
+                                    <SpaIcon style={{fontSize: "300px"}} color="disabled" />
+                                </Grid>
+                                <Grid item>
+                                    <Typography variant="h2" style={{color: "grey"}}>
+                                        I am not finished yet.
+                                    </Typography>
+                                    <Typography variant="h2" style={{color: "grey"}}>
+                                        Come check next time ;)
+                                    </Typography>
+                                </Grid>
 
-                                </Paper>
                             </Grid>
-                        </Grid>
-                        <Paper style={styles.footer}>
-                            <BottomNavigation>
-                                <BottomNavigationAction label="Recent" icon={<RestoreIcon />} />
-                                <BottomNavigationAction label="Favorites" icon={<AddBox />} />
-                            </BottomNavigation>
-                        </Paper>
+                        </Container>
                 </section>
             </Fade>
         );

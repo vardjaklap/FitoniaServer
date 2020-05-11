@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+// import FormControlLabel from '@material-ui/core/FormControlLabel';
+// import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -13,6 +13,8 @@ import Paper from '@material-ui/core/Paper'
 import Avatar from '@material-ui/core/Avatar';
 import AssignmentInd from '@material-ui/icons/AssignmentInd';
 import {  pink } from '@material-ui/core/colors';
+import IconButton from "@material-ui/core/IconButton";
+import ArrowBack from '@material-ui/icons/ArrowBack'
 
 const styles = {
     contTyp: {
@@ -99,6 +101,9 @@ class Login extends Component {
         <div>
             <AppBar position="static" color="primary">
                 <Toolbar>
+                    <IconButton href="/" aria-label="back" color="inherit">
+                        <ArrowBack fontSize="large" />
+                    </IconButton>
                     <Typography variant="h6" color="inherit">
                         Sign in
                     </Typography>
@@ -150,10 +155,10 @@ class Login extends Component {
                                 />
                             </Grid>
                             <Grid item xs={12}>
-                                <FormControlLabel
-                                    control={<Checkbox value="allowExtraEmails" color="primary" />}
-                                    label="Keep me logged in"
-                                />
+                                {/*<FormControlLabel*/}
+                                {/*    control={<Checkbox value="allowExtraEmails" color="primary" />}*/}
+                                {/*    label="Keep me logged in"*/}
+                                {/*/>*/}
                             </Grid>
                         </Grid>
                         <Button
@@ -164,7 +169,7 @@ class Login extends Component {
                             onClick={this.complete}
                             style={styles.button}
                         >
-                            Sign Up
+                            Sign In
                         </Button>
                         <Grid container justify="flex-end">
                             <Grid item>

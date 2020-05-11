@@ -7,10 +7,10 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import RestoreIcon from '@material-ui/icons/Restore';
 import AddBox from '@material-ui/icons/AddBox';
 //import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell } from 'recharts';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import Fade from '@material-ui/core/Fade';
-
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
+import FastfoodIcon from '@material-ui/icons/Fastfood';
 
 
 
@@ -144,79 +144,28 @@ class Nutrition extends Component {
                                     </Fade>
                                     : null }
                             </Paper>
-                            {/*<Grid item xs={10}>*/}
-                            {/*    { this.state.page === 1 ?*/}
-                            {/*        <Paper style={styles.Paper}>*/}
-                            {/*            <Fade in={this.state.page === 1}>*/}
-                            {/*                <Grid container>*/}
-                            {/*                    <Grid item xs={12} md={6}>*/}
-                            {/*                        <div style={{ height: 500 +'px'}}>*/}
-                            {/*                            <ResponsiveContainer  width="100%" height="100%">*/}
-                            {/*                                <BarChart data={this.state.dataToDisplay}>*/}
-                            {/*                                    <XAxis dataKey="name" stroke="teal" />*/}
-                            {/*                                    <YAxis domain={[0, 100]} stroke="teal"/>*/}
-                            {/*                                    <Bar dataKey="value" fill="#8884d8" barSize={25}*/}
-                            {/*                                         background={{ fill: '#eee' }}>*/}
-                            {/*                                        {*/}
-                            {/*                                            this.state.dataToDisplay.map((entry, index) => (*/}
-                            {/*                                                <Cell key={`cell-${index}`} fill={colors[index % 20]}/>*/}
-                            {/*                                            ))*/}
-                            {/*                                        }*/}
-                            {/*                                    </Bar>*/}
-                            {/*                                </BarChart>*/}
-                            {/*                            </ResponsiveContainer>*/}
-                            {/*                        </div>*/}
-                            {/*                    </Grid>*/}
-                            {/*                    <Grid item xs={12} md={6}>*/}
-                            {/*                        <TextField*/}
-                            {/*                            id="calories"*/}
-                            {/*                            name="calories"*/}
-                            {/*                            type="number"*/}
-                            {/*                            label="Calories"*/}
-                            {/*                            style={styles.textField}*/}
-                            {/*                            margin="dense"*/}
-                            {/*                            variant="outlined"*/}
-                            {/*                            onChange={this.handleChange}*/}
-                            {/*                        >*/}
-                            {/*                        </TextField>*/}
-                            {/*                        <TextField*/}
-                            {/*                            id="proteins"*/}
-                            {/*                            name="proteins"*/}
-                            {/*                            type="number"*/}
-                            {/*                            label="Proteins"*/}
-                            {/*                            style={styles.textField}*/}
-                            {/*                            margin="dense"*/}
-                            {/*                            variant="outlined"*/}
-                            {/*                            onChange={this.handleChange}></TextField>*/}
-                            {/*                        <TextField*/}
-                            {/*                            id="fats"*/}
-                            {/*                            name="fats"*/}
-                            {/*                            type="number"*/}
-                            {/*                            label="Fats"*/}
-                            {/*                            style={styles.textField}*/}
-                            {/*                            margin="dense"*/}
-                            {/*                            variant="outlined"*/}
-                            {/*                            onChange={this.handleChange}></TextField>*/}
-                            {/*                        <TextField*/}
-                            {/*                            id="carbohydrates"*/}
-                            {/*                            name="carbohydrates"*/}
-                            {/*                            type="number"*/}
-                            {/*                            label="Carbohydrates"*/}
-                            {/*                            style={styles.textField}*/}
-                            {/*                            margin="dense"*/}
-                            {/*                            variant="outlined"*/}
-                            {/*                            onChange={this.handleChange}></TextField>*/}
-                            {/*                        <Grid container justify="center" style={styles.cont}>*/}
-                            {/*                            <Button variant="contained" style={styles.button} color="primary" onClick={this.handleClick}>*/}
-                            {/*                                Add values!*/}
-                            {/*                            </Button>*/}
-                            {/*                        </Grid>*/}
-                            {/*                    </Grid>*/}
-                            {/*                </Grid>*/}
-                            {/*            </Fade>*/}
-                            {/*        </Paper>*/}
-                            {/*        : null }*/}
-                            {/*</Grid>*/}
+                            <Grid item xs={10}>
+                                { this.state.page === 1 ?
+                                    <Container>
+                                        <Grid container  direction="column"
+                                              justify="center"
+                                              alignItems="center" style={{height: "80vh"}}>
+                                            <Grid item>
+                                                <FastfoodIcon style={{fontSize: "300px"}} color="disabled" />
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant="h2" style={{color: "grey"}}>
+                                                    I am not finished yet.
+                                                </Typography>
+                                                <Typography variant="h2" style={{color: "grey"}}>
+                                                    Come check next time ;)
+                                                </Typography>
+                                            </Grid>
+
+                                        </Grid>
+                                    </Container>
+                                    : null }
+                            </Grid>
                         </Grid>
                     <Paper style={styles.footer}>
                         <BottomNavigation

@@ -17,7 +17,10 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import Grow from "@material-ui/core/Grow";
 import SleepHistory from "./sleepComponents/sleepHistory";
-
+import AddIcon from '@material-ui/icons/Add';
+import IconButton from "@material-ui/core/IconButton";
+import Rating from '@material-ui/lab/Rating';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 
 const styles = {
     Paper: {
@@ -74,9 +77,9 @@ class Sleep extends Component {
 
                 ],
             checked: true,
-            enterSleepTurn: 1,
+            enterSleepTurn: 0,
             page: 0
-        })
+        });
         this.sendTheme()
     }
     sendTheme(){
@@ -122,6 +125,28 @@ class Sleep extends Component {
                     { this.state.page === 0 ?
                         <Fade in={this.state.page === 0} >
                             <Grid container justify="center">
+                                <Grow in={this.state.enterSleepTurn === 0} unmountOnExit mountOnEnter>
+                                    <Grid container  direction="column"
+                                          justify="center"
+                                          alignItems="center" style={{height: "80vh"}}
+                                    >
+                                        <Grid item>
+                                            <IconButton color="primary" aria-label="add sleep entry" component="span"  onClick={this.handleClickNext}>
+                                                <AddIcon style={{fontSize: "300px"}} color="disabled" />
+                                            </IconButton>
+
+                                        </Grid>
+                                        <Grid item>
+                                            <Typography variant="h3" style={{color: "grey"}}>
+                                                You haven't logged your sleep yet.
+                                            </Typography>
+                                            <Typography variant="h3" style={{color: "grey"}}>
+                                                Click here to add
+                                            </Typography>
+                                        </Grid>
+
+                                    </Grid>
+                                </Grow>
                                 <Grow in={this.state.enterSleepTurn === 1} unmountOnExit mountOnEnter>
                                     <Card style={styles.card}>
                                         <div style={styles.picstyle}>
@@ -161,7 +186,10 @@ class Sleep extends Component {
                                             </Grid>
                                         </CardContent>
                                         <CardActions>
-                                            <Grid container justify="flex-end">
+                                            <Grid container justify="space-between">
+                                                <Button size="small" color="primary" onClick={this.handleBack}>
+                                                    Cancel
+                                                </Button>
                                                 <Button size="small" color="primary" onClick={this.handleClickNext}>
                                                     Next
                                                 </Button>
@@ -178,11 +206,7 @@ class Sleep extends Component {
                                                 Rate your sleep
                                             </Typography>
                                             <Grid container justify="center">
-                                                <StarIcon color="primary" style={styles.starIcon}></StarIcon>
-                                                <StarIcon color="primary" style={styles.starIcon}></StarIcon>
-                                                <StarIcon color="primary" style={styles.starIcon}></StarIcon>
-                                                <StarIcon color="primary" style={styles.starIcon}></StarIcon>
-                                                <StarIcon color="primary" style={styles.starIcon}></StarIcon>
+                                                <Rating name="size-large" defaultValue={2} size="large" />
                                             </Grid>
                                         </CardContent>
                                         <CardActions>
@@ -228,6 +252,22 @@ class Sleep extends Component {
                                             </Grid>
                                         </CardActions>
                                     </Card>
+                                </Grow>
+                                <Grow in={this.state.enterSleepTurn === 4} unmountOnExit mountOnEnter>
+                                    <Grid container  direction="column"
+                                          justify="center"
+                                          alignItems="center" style={{height: "80vh"}}
+                                    >
+                                        <Grid item>
+                                                <CheckCircleOutlineIcon style={{fontSize: "300px"}} color="disabled" />
+                                        </Grid>
+                                        <Grid item>
+                                            <Typography variant="h2" style={{color: "grey"}}>
+                                                You have already submitted your entry
+                                            </Typography>
+                                        </Grid>
+
+                                    </Grid>
                                 </Grow>
                             </Grid>
                         </Fade>

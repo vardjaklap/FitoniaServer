@@ -9,8 +9,10 @@ export const socketMethods = {
       const token = auth.loggedIn();
       if (token){
           Socket.emit('isAuth', token)
+          return true;
       }else{
           console.log('No user found!')
+          return false;
       }
   },
     logout: () => {

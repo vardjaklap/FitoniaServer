@@ -102,7 +102,7 @@ userSchema.statics.findByCredentials = async (email, password) => {
     const isMatch = await bcrypt.compare(password, user.pass);
     if (!isMatch) {
         console.log("Wrong password or username!");
-        throw new Error('Unable to login')
+        throw new Error('Wrong password or username!')
     }
 
     return user
@@ -127,7 +127,7 @@ userSchema.statics.createUser = async (info) => {
 
         });
     }else{
-        console.log('User exists!')
+        console.log('User exists!');
         throw new Error('User already exists!')
     }
 
@@ -141,12 +141,23 @@ userSchema.statics.loadCurrentDate = async () => {
 
 }
 userSchema.methods.updateInfo = async function (values) {
-    const user = this;
+    let user = this;
     if(values.water){
         user.entries[user.entries.length - 1].water.amount = values.water;
     }
     await user.save();
 
+}
+userSchema.methods.updateProfile = async function (info) {
+    let user = this;
+    user.name = info.name;
+    user.surname = info.surname;
+    user.email = info.email;
+    if(info.passNew.length >= 8){
+        const hashedPass = await bcrypt.hash(info.passNew, 8);
+        user.pass = hashedPass;
+    }
+    await user.save();
 }
 
 const User = mongoose.model('User', userSchema);
