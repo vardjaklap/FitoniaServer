@@ -101,7 +101,7 @@ class WaterHistory extends Component {
                 },
                 {
                     "name": "Tuesday",
-                    "%": 0
+                    "%": 100
                 },
                 {
                     "name": "Wednesday",
@@ -109,7 +109,7 @@ class WaterHistory extends Component {
                 },
                 {
                     "name": "Thursday",
-                    "%": 0
+                    "%": 30
                 },
                 {
                     "name": "Friday",
@@ -117,11 +117,11 @@ class WaterHistory extends Component {
                 },
                 {
                     "name": "Saturday",
-                    "%": 0
+                    "%": 80
                 },
                 {
                     "name": "Sunday",
-                    "%": 0
+                    "%": 40
                 }
             ]
         })

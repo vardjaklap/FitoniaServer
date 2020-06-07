@@ -2,33 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/trainingData/barbell.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/trainingData/close-grip-bench-press_-_step_1.max_.v1-e1368126860566.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/trainingData/exercises.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/resources/logoBig.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/resources/logoBogTransparent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/foodBase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrMain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/meditation.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/meditation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/notepad.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/notepad.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutrition.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutrition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrHistory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/sleep.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/sleep.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/training.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/waterComponents/waterHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/waterComponents/waterHistory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/registrationpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/registrationpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/unauth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/unauth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/socket.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/socket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/models/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
@@ -63,6 +49,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -148,7 +135,18 @@
       <workItem from="1588727787063" duration="1259000" />
       <workItem from="1588951708461" duration="4142000" />
       <workItem from="1589139657176" duration="823000" />
-      <workItem from="1589210797467" duration="2405000" />
+      <workItem from="1589210797467" duration="3545000" />
+      <workItem from="1589326231599" duration="3816000" />
+      <workItem from="1589504193225" duration="4006000" />
+      <workItem from="1590273671603" duration="3959000" />
+      <workItem from="1590537323456" duration="3836000" />
+      <workItem from="1590707830125" duration="1571000" />
+      <workItem from="1590796945102" duration="7951000" />
+      <workItem from="1590958483435" duration="8229000" />
+      <workItem from="1591144397417" duration="5203000" />
+      <workItem from="1591221480314" duration="8832000" />
+      <workItem from="1591399635185" duration="7681000" />
+      <workItem from="1591482780818" duration="7058000" />
     </task>
     <servers />
   </component>
@@ -179,6 +177,10 @@
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
     <state x="409" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1030@0.0.1920.1030" timestamp="1585433797495" />
+    <state x="658" y="282" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590797048782">
+      <screen x="0" y="0" width="1920" height="1030" />
+    </state>
+    <state x="658" y="282" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1030@0.0.1920.1030" timestamp="1590797048782" />
     <state x="686" y="207" key="FileChooserDialogImpl" timestamp="1586732000392">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
@@ -195,6 +197,14 @@
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
     <state x="226" y="0" key="new project wizard/0.0.1920.1030@0.0.1920.1030" timestamp="1585846437600" />
+    <state x="531" y="226" key="run.anything.popup" timestamp="1591231597610">
+      <screen x="0" y="0" width="1920" height="1030" />
+    </state>
+    <state x="531" y="226" key="run.anything.popup/0.0.1920.1030@0.0.1920.1030" timestamp="1591231597610" />
+    <state x="539" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1591486433536">
+      <screen x="0" y="0" width="1920" height="1030" />
+    </state>
+    <state x="539" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1030@0.0.1920.1030" timestamp="1591486433536" />
   </component>
   <component name="masterDetails">
     <states>

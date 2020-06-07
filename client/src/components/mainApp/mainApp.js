@@ -101,7 +101,7 @@ export class MainApp extends Component {
                             <Route key="/app" exact={true} path="/app" render={() => <Dashboard callBackFromParent={this.myCallback} userData={this.props.userData}/>} />
                             <Route key="/app/training" exact={true} path="/app/training" render={() => <Training callBackFromParent={this.myCallback} userData={this.props.userData}/>} />
                             <Route key="/app/notepad" exact={true} path="/app/notepad" render={() => <Notepad callBackFromParent={this.myCallback} userData={this.props.userData}/>} />
-                            <Route key="/app/nutrition" exact={true} path="/app/nutrition" render={() => <Nutrition callBackFromParent={this.myCallback} userData={this.props.userData}/>} />
+                            <Route key="/app/nutrition" exact={true} path="/app/nutrition" render={() => <Nutrition command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>} />
                             <Route key="/app/hydration" exact={true} path="/app/hydration" render={() => <Hydration command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>} />
                             <Route key="/app/sleep" exact={true} path="/app/sleep" render={() => <Sleep callBackFromParent={this.myCallback} userData={this.props.userData}/>} />
                             <Route key="/app/meditation" exact={true} path="/app/meditation" render={() => <Meditation callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>

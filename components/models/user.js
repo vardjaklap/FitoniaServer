@@ -144,6 +144,14 @@ userSchema.methods.updateInfo = async function (values) {
     let user = this;
     if(values.water){
         user.entries[user.entries.length - 1].water.amount = values.water;
+    }else if(values.cal){
+        user.entries[user.entries.length - 1].nutr.cal = values.cal;
+    }else if(values.fat){
+        user.entries[user.entries.length - 1].nutr.fat = values.fat;
+    }else if(values.prot){
+        user.entries[user.entries.length - 1].nutr.prot = values.prot;
+    }else if(values.carb){
+        user.entries[user.entries.length - 1].nutr.carb = values.carb;
     }
     await user.save();
 
@@ -157,6 +165,32 @@ userSchema.methods.updateProfile = async function (info) {
         const hashedPass = await bcrypt.hash(info.passNew, 8);
         user.pass = hashedPass;
     }
+    await user.save();
+}
+userSchema.methods.getNutrData = async function () {
+    let user = this;
+    return user.entries[user.entries.length - 1].nutr;
+}
+userSchema.methods.addFoodEntry = async function (values) {
+    let user = this;
+    let nutr = user.entries[user.entries.length - 1].nutr;
+    nutr.cal += values.cal;
+    nutr.fat += values.fat;
+    nutr.prot += values.prot;
+    nutr.carb += values.carb;
+    await user.save();
+}
+
+userSchema.methods.getTodaySleepData = async function () {
+    let user = this;
+    return user.entries[user.entries.length - 1].sl;
+}
+userSchema.methods.addSleepEntry = async function (sleepObj) {
+    let user = this;
+    let sleep = user.entries[user.entries.length - 1].sl;
+    sleep.dur = sleepObj.dur;
+    sleep.quality = sleepObj.quality;
+    sleep.note = sleepObj.note;
     await user.save();
 }
 

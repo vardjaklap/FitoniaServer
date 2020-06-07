@@ -14,6 +14,8 @@ import Fab from "@material-ui/core/Fab";
 import WaterHistory from './waterComponents/waterHistory'
 import { LinearProgress } from '@material-ui/core';
 import amber from '@material-ui/core/colors/amber'
+import Container from "@material-ui/core/Container";
+import Opacity from '@material-ui/icons/Opacity';
 
 const styles = {
     Paper: {
@@ -97,7 +99,6 @@ class Hydration extends Component {
             waterAmount: this.state.waterAmount + amount
         });
         setTimeout(() => {
-            console.log(this.state.waterAmount);
             this.props.command("updateValue", {"water": this.state.waterAmount});
         }, 1)
 
@@ -125,7 +126,7 @@ class Hydration extends Component {
         if(this.state.customChange === ""){
 
         }else{
-            this.addWaterPercentage(this.state.customChange);
+            this.addWaterPercentage(parseInt(this.state.customChange));
             this.setState({
                 customChange: 0
             })
@@ -179,7 +180,6 @@ class Hydration extends Component {
                                                                 margin="dense"
                                                                 variant="outlined"
                                                                 onChange={this.handleCustomChange}
-
                                                             ></TextField>
                                                             <Fab color="primary" aria-label="Add" onClick={this.handleCustom}>
                                                                 <AddIcon />
@@ -199,13 +199,26 @@ class Hydration extends Component {
                                 : null }
                             { this.state.page === 1 ?
                                 <Fade in={this.state.page === 1}>
-                                    <Grid container justify="center">
-                                        <Grid item xs={12} sm={10} md={8}>
-                                            <Paper style={{marginTop: 30}}  elevation={1}>
-                                                <WaterHistory></WaterHistory>
-                                            </Paper>
-                                        </Grid>
-                                    </Grid>
+                                    <div>
+                                        <Container>
+                                            <Grid container  direction="column"
+                                                  justify="center"
+                                                  alignItems="center" style={{height: "80vh"}}>
+                                                <Grid item>
+                                                    <Opacity style={{fontSize: "300px"}} color="disabled" />
+                                                </Grid>
+                                                <Grid item>
+                                                    <Typography variant="h2" style={{color: "grey"}}>
+                                                        I am not finished yet.
+                                                    </Typography>
+                                                    <Typography variant="h2" style={{color: "grey"}}>
+                                                        Come check next time ;)
+                                                    </Typography>
+                                                </Grid>
+
+                                            </Grid>
+                                        </Container>
+                                    </div>
                                 </Fade>
                                 : null }
                         </Grid>

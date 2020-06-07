@@ -22,9 +22,9 @@ app.get('*', (req, res) => {
 
 // Listen for new connections to Socket.io
 io.on('connection', function(socket){
-    console.log('a user connected');
+    //console.log('a user connected');
     socket.on('disconnect', function(){
-        console.log('user disconnected');
+        //console.log('user disconnected');
     });
     let currentToken;
     socket.on('login',async function(loginfo){
@@ -79,6 +79,48 @@ io.on('connection', function(socket){
             currentToken = token;
         }catch (e) {
             socket.emit('alert','error', e.message)
+        }
+    });
+    socket.on('getNutr', async function(keyValue){
+        try{
+            const user = await verifyAuth(currentToken);
+            const nutrData = await user.getNutrData();
+                socket.emit('getNutrInfo', nutrData);
+            socket.emit('alert', 'success', 'Loaded data!')
+        }catch(e){
+            socket.emit('alert','error', 'Error while updating! Please reload!');
+            socket.emit('reload');
+        }
+    });
+    socket.on('addFoodEntry', async function(nutrValues){
+        try{
+            const user = await verifyAuth(currentToken);
+            await user.addFoodEntry(nutrValues);
+            socket.emit('alert', 'success', 'Your daily values have been updated!')
+        }catch(e){
+            socket.emit('alert','error', 'Error while updating! Please reload!');
+            socket.emit('reload');
+        }
+    });
+    socket.on('getTodaySleepEntry', async function(){
+        try{
+            const user = await verifyAuth(currentToken);
+            const sleepData = await user.getTodaySleepData();
+            socket.emit('getSleepData', sleepData);
+            socket.emit('alert', 'success', 'Loaded data!')
+        }catch(e){
+            socket.emit('alert','error', 'Error while updating! Please reload!');
+            socket.emit('reload');
+        }
+    });
+    socket.on('addSleepEntry', async function(sleep){
+        try{
+            const user = await verifyAuth(currentToken);
+            await user.addSleepEntry(sleep);
+            socket.emit('alert', 'success', 'Your sleep has been logged!')
+        }catch(e){
+            socket.emit('alert','error', 'Error while updating! Please reload!');
+            socket.emit('reload');
         }
     });
 });

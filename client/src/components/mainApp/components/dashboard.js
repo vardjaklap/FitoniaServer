@@ -12,6 +12,18 @@ import Create from '@material-ui/icons/Create';
 import ReportProblem from '@material-ui/icons/ReportProblem';
 import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardMedia from "@material-ui/core/CardMedia";
+import CardContent from "@material-ui/core/CardContent";
+import orange from "@material-ui/core/colors/orange";
+import Gavel from "@material-ui/icons/Gavel";
+import {Fastfood, Opacity, Snooze} from "@material-ui/icons";
+import teal from "@material-ui/core/colors/teal";
+import blue from "@material-ui/core/colors/blue";
+import indigo from "@material-ui/core/colors/indigo";
+import {Link} from "react-router-dom";
+import ListItem from "@material-ui/core/ListItem";
 
 
 
@@ -72,73 +84,106 @@ class Dashboard extends Component {
             <Fade in={this.state.checked}>
                 <div>
                     <Container>
-                        <Grid container justify="center" spacing={10}>
-                            <Grid item md={3}>
-                                <Paper style={styles.Paper}>
-                                    <div>
-                                        <Typography>Training</Typography>
-                                        <Create  style={{fontSize: '4rem', color: 'grey'}} />
-                                        <Typography>
-                                            In progress
-                                        </Typography>
-                                    </div>
-                                </Paper>
+                        <Grid container>
+                            <Grid item xs={12}>
+                                <Typography gutterBottom variant="h2" style={{margin: "50px 0 20px"}}>Get started here!</Typography>
                             </Grid>
-                            <Grid item md={3}>
-                                <Paper style={styles.Paper}>
-                                    <div >
-                                        <Typography>Notepad</Typography>
-                                        <ReportProblem style={{fontSize: '4rem', color: 'grey'}} />
-                                        <Typography>
-                                            Not started
-                                        </Typography>
-                                    </div>
-                                </Paper>
+
+                            <Grid item xs={12}>
+                                <Grid container justify="space-evenly"
+                                      alignItems="stretch"
+                                      spacing={4}>
+
+                                    <Grid item md={3}>
+                                        <Card style={{height: "100%"}}>
+                                            <CardActionArea component={Link} to="/app/training" style={{height: "100%"}}>
+                                                <div style={{height: "150px", width: "100%", backgroundColor: orange[500]}}>
+                                                    <Grid container justify="center"
+                                                          alignItems="center"
+                                                          style={{height: "100%"}}>
+                                                        <Gavel style={{fontSize: 65, color: "white"}}/>
+                                                    </Grid>
+                                                </div>
+                                                <CardContent  style={{textAlign: "left"}}>
+                                                    <Typography gutterBottom variant="h5" component="h2">
+                                                        Training
+                                                    </Typography>
+                                                    <Typography variant="body2" color="textSecondary" component="p">
+                                                        Get your blood pumping! Find the exercise for the appropriate body part and discover something new!
+                                                    </Typography>
+                                                </CardContent>
+                                            </CardActionArea>
+                                        </Card>
+                                    </Grid>
+                                    <Grid item md={3}>
+                                        <Card style={{height: "100%"}}>
+                                            <CardActionArea component={Link} to="/app/nutrition" style={{height: "100%"}}>
+                                                <div style={{height: "150px", width: "100%", backgroundColor: teal[500]}}>
+                                                    <Grid container justify="center"
+                                                          alignItems="center"
+                                                          style={{height: "100%"}}
+                                                          >
+                                                        <Fastfood style={{fontSize: 65, color: "white"}}/>
+                                                    </Grid>
+                                                </div>
+                                                <CardContent  style={{textAlign: "left"}}>
+                                                    <Typography gutterBottom variant="h5" component="h2">
+                                                        Nutrition
+                                                    </Typography>
+                                                    <Typography variant="body2" color="textSecondary" component="p">
+                                                        Light snack or a full meal - count your calories to your goal!
+                                                    </Typography>
+                                                </CardContent>
+                                            </CardActionArea>
+                                        </Card>
+                                    </Grid>
+                                    <Grid item md={3}>
+                                        <Card style={{height: "100%"}}>
+                                            <CardActionArea component={Link} to="/app/hydration" style={{height: "100%"}}>
+                                                <div style={{height: "150px", width: "100%", backgroundColor: blue[500]}}>
+                                                    <Grid container justify="center"
+                                                          alignItems="center"
+                                                          style={{height: "100%"}}>
+                                                        <Opacity style={{fontSize: 65, color: "white"}}/>
+                                                    </Grid>
+                                                </div>
+                                                <CardContent  style={{textAlign: "left"}}>
+                                                    <Typography gutterBottom variant="h5" component="h2">
+                                                        Hydration
+                                                    </Typography>
+                                                    <Typography variant="body2" color="textSecondary" component="p">
+                                                        Humans consist mostly out of water - don't forget to maintain your hydration!
+                                                    </Typography>
+                                                </CardContent>
+                                            </CardActionArea>
+                                        </Card>
+                                    </Grid>
+                                    <Grid item md={3}>
+                                        <Card style={{height: "100%"}}>
+                                            <CardActionArea component={Link} to="/app/sleep" style={{height: "100%"}}>
+                                                <div style={{height: "150px", width: "100%", backgroundColor: indigo[500]}}>
+                                                    <Grid container justify="center"
+                                                          alignItems="center"
+                                                          style={{height: "100%"}}>
+                                                        <Snooze style={{fontSize: 65, color: "white"}}/>
+                                                    </Grid>
+                                                </div>
+                                                <CardContent  style={{textAlign: "left"}}>
+                                                    <Typography gutterBottom variant="h5" component="h2">
+                                                        Sleep
+                                                    </Typography>
+                                                    <Typography variant="body2" color="textSecondary" component="p">
+                                                        With a good nights sleep any goals for the day are reachable!
+                                                    </Typography>
+                                                </CardContent>
+                                            </CardActionArea>
+                                        </Card>
+                                    </Grid>
+
+
+                                </Grid>
                             </Grid>
-                            <Grid item md={3}>
-                                <Paper style={styles.Paper}>
-                                    <div>
-                                        <Typography>Nutrition</Typography>
-                                        <Create  style={{fontSize: '4rem', color: 'grey'}} />
-                                        <Typography>
-                                            In progress
-                                        </Typography>
-                                    </div>
-                                </Paper>
-                            </Grid>
-                            <Grid item md={3}>
-                                <Paper style={styles.Paper}>
-                                    <div>
-                                        <Typography>Hydration</Typography>
-                                        <Create  style={{fontSize: '4rem', color: 'grey'}} />
-                                        <Typography>
-                                            In progress
-                                        </Typography>
-                                    </div>
-                                </Paper>
-                            </Grid>
-                            <Grid item md={3}>
-                                <Paper style={styles.Paper}>
-                                    <div >
-                                        <Typography>Sleep</Typography>
-                                        <Create  style={{fontSize: '4rem', color: 'grey'}} />
-                                        <Typography>
-                                            In progress
-                                        </Typography>
-                                    </div>
-                                </Paper>
-                            </Grid>
-                            <Grid item md={3}>
-                                <Paper style={styles.Paper}>
-                                    <div >
-                                        <Typography>Meditation</Typography>
-                                        <ReportProblem style={{fontSize: '4rem', color: 'grey'}} />
-                                        <Typography>
-                                            Not started
-                                        </Typography>
-                                    </div>
-                                </Paper>
-                            </Grid>
+
                         </Grid>
                     </Container>
                 </div>

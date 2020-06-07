@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
-
 import Grid from '@material-ui/core/Grid';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import RestoreIcon from '@material-ui/icons/Restore';
-import StarIcon from '@material-ui/icons/StarBorderOutlined';
 import AddBox from '@material-ui/icons/AddBox';
 import Fade from '@material-ui/core/Fade';
 import TextField from "@material-ui/core/TextField";
@@ -21,6 +19,11 @@ import AddIcon from '@material-ui/icons/Add';
 import IconButton from "@material-ui/core/IconButton";
 import Rating from '@material-ui/lab/Rating';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import {KeyboardTimePicker} from "@material-ui/pickers";
+import moment from 'moment';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import MomentUtils from '@date-io/moment';
+import {Socket} from "../../../socket";
 
 const styles = {
     Paper: {
@@ -41,7 +44,7 @@ const styles = {
     },
     card: {
         margin: "50px 0 0",
-        maxWidth: 375,
+        maxWidth: 430,
     },
     picstyle:{
         height: "180px",
@@ -62,34 +65,86 @@ class Sleep extends Component {
         super(props);
         this.state = {
             checked: false,
-            enterSleepTurn: 0
+            enterSleepTurn: -1,
+            startSleep: "2020-06-05T21:00:00-04:00",
+            endSleep: "2020-06-06T08:00:00-04:00",
+            rating: 3,
+            note: ""
         };
         this.handleChangeNav = this.handleChangeNav.bind(this);
         this.handleClickNext = this.handleClickNext.bind(this);
         this.handleBack = this.handleBack.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.sendTheme = this.sendTheme.bind(this);
+        this.handleNoteInput = this.handleNoteInput.bind(this);
+        Socket.on('getSleepData', (data) => {
+            //console.log(data);
+            this.setData(data);
+        })
     }
 
     componentDidMount() {
+        Socket.emit("getTodaySleepEntry");
         this.setState({
-            dataToDisplay: [
-
-                ],
             checked: true,
-            enterSleepTurn: 0,
-            page: 0
+            enterSleepTurn: -1,
+            page: 0,
+            startSleep: "2020-06-05T21:00:00-04:00",
+            endSleep: "2020-06-06T08:00:00-04:00",
+            rating: 3,
+            note: "",
+            hoursSlept: 0,
+            minutesSlept: 0
         });
         this.sendTheme()
     }
     sendTheme(){
         this.props.callBackFromParent("indigo");
     }
+    setData(data){
+        if(data.dur == 0){
+            this.setState({
+                enterSleepTurn: 0,
+            })
+        }else{
+            let difH = Math.floor(data.dur / 60);
+            let difM = data.dur % 60;
+            this.setState({
+                enterSleepTurn: 4,
+                hoursSlept: difH,
+                minutesSlept: difM,
+                rating: data.quality,
+                note: data.note
+            })
+        }
+    }
     handleClickNext(){
         let oldValue = this.state.enterSleepTurn + 1;
         this.setState({
             enterSleepTurn: 100
         });
+        if(oldValue == 4){
+            let a = moment(this.state.startSleep);
+            let b = moment(this.state.endSleep);
+            if(a.hour() < 12){
+                a.add(1, "days")
+
+            }
+            let diff = b.diff(a, "minutes");
+            let difH = b.diff(a, "hours");
+            let difM = b.diff(a, "minutes") - (difH * 60);
+            this.setState({
+                diff: diff,
+                hoursSlept: difH,
+                minutesSlept: difM
+            })
+            let sleepObj = {
+                dur: diff,
+                quality: this.state.rating,
+                note: this.state.note
+            }
+            Socket.emit("addSleepEntry", sleepObj);
+        }
         setTimeout(
             function() {
                 this.setState({enterSleepTurn: oldValue});
@@ -113,6 +168,29 @@ class Sleep extends Component {
                 .bind(this),
             600
         );
+    }
+    handleStartPicker(date){
+        this.setState({
+            startSleep: date
+        })
+        //console.log(date);
+    }
+    handleEndPicker(date){
+        this.setState({
+            endSleep: date
+        });
+    }
+    changeRating(newValue){
+        this.setState({
+            rating: newValue
+        });
+        //console.log(newValue);
+    }
+    handleNoteInput(event){
+        this.setState({
+            note: event.target.value
+        })
+        //console.log(event.target.value);
     }
     handleChange(event){
 
@@ -156,33 +234,23 @@ class Sleep extends Component {
                                             <Typography gutterBottom variant="h5" component="h2" style={{marginBottom: "20px"}}>
                                                 Sleep duration
                                             </Typography>
-                                            <Grid container justify="space-between">
-                                                <TextField
-                                                    id="time"
-                                                    label="Start"
-                                                    type="time"
-                                                    defaultValue="21:00"
-                                                    style={styles.textField}
-                                                    InputLabelProps={{
-                                                        shrink: true,
-                                                    }}
-                                                    inputProps={{
-                                                        step: 300, // 5 min
-                                                    }}
-                                                />
-                                                <TextField
-                                                    id="time"
-                                                    label="End"
-                                                    type="time"
-                                                    defaultValue="07:00"
-                                                    style={styles.textField}
-                                                    InputLabelProps={{
-                                                        shrink: true,
-                                                    }}
-                                                    inputProps={{
-                                                        step: 300, // 5 min
-                                                    }}
-                                                />
+                                            <Grid container justify="space-between"  direction="column">
+                                                <MuiPickersUtilsProvider utils={MomentUtils}>
+                                                    <KeyboardTimePicker
+                                                        label="Start"
+                                                        placeholder="21:00 PM"
+                                                        mask="__:__ _M"
+                                                        value={this.state.startSleep}
+                                                        onChange={date => this.handleStartPicker(date)}
+                                                    />
+                                                    <KeyboardTimePicker
+                                                        label="End"
+                                                        placeholder="07:00 AM"
+                                                        mask="__:__ _M"
+                                                        value={this.state.endSleep}
+                                                        onChange={date => this.handleEndPicker(date)}
+                                                    />
+                                                </MuiPickersUtilsProvider>
                                             </Grid>
                                         </CardContent>
                                         <CardActions>
@@ -206,7 +274,9 @@ class Sleep extends Component {
                                                 Rate your sleep
                                             </Typography>
                                             <Grid container justify="center">
-                                                <Rating name="size-large" defaultValue={2} size="large" />
+                                                <Rating name="size-large" defaultValue={3} size="large" value={this.state.rating} onChange={(event, newValue) => {
+                                                    this.changeRating(newValue);
+                                                }}/>
                                             </Grid>
                                         </CardContent>
                                         <CardActions>
@@ -238,6 +308,7 @@ class Sleep extends Component {
                                                     defaultValue=""
                                                     variant="outlined"
                                                     margin="dense"
+                                                    onChange={this.handleNoteInput}
                                                 />
                                             </Grid>
                                         </CardContent>
@@ -262,11 +333,29 @@ class Sleep extends Component {
                                                 <CheckCircleOutlineIcon style={{fontSize: "300px"}} color="disabled" />
                                         </Grid>
                                         <Grid item>
-                                            <Typography variant="h2" style={{color: "grey"}}>
-                                                You have already submitted your entry
+                                            <Typography variant="h3" style={{color: "grey"}}>
+                                                You have already submitted your entry.
                                             </Typography>
                                         </Grid>
-
+                                        <Grid item>
+                                            <Card style={{padding: 20, margin: "20px 0 0 "}}>
+                                                <Grid container justify="space-evenly" spacing={3}>
+                                                    <Grid item>
+                                                        <Typography variant="h5">
+                                                            {this.state.hoursSlept} hours {this.state.minutesSlept} minutes
+                                                        </Typography>
+                                                    </Grid>
+                                                    <Grid item>
+                                                        <Rating name="read-only" value={this.state.rating} readOnly />
+                                                    </Grid>
+                                                    <Grid item>
+                                                        <Typography variant="h5">
+                                                            {this.state.note}
+                                                        </Typography>
+                                                    </Grid>
+                                                </Grid>
+                                            </Card>
+                                        </Grid>
                                     </Grid>
                                 </Grow>
                             </Grid>

@@ -17,12 +17,11 @@ import Grid from "@material-ui/core/Grid";
 
 const styles = {
     grow: {
-        flexGrow: 1,
-        paddingRight: "60px"
+        flexGrow: 1
     },
     menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
+        marginLeft: 0,
+        marginRight: 0,
     },
     avatarBig: {
         margin: 10,
@@ -33,15 +32,12 @@ const styles = {
         margin: 10
     },
     avatarProfile: {
-        width: 200,
-        height: 200,
-        margin: "8vh auto"
+        width: 75,
+        height: 75,
+        margin: "20px auto"
     },
     styleProfile: {
         height: '40vh',
-    },
-    styleNormal: {
-
     }
 }
 
@@ -57,18 +53,13 @@ class Nav extends Component {
         this.handleMenu = this.handleMenu.bind(this);
         this.handleClose = this.handleClose.bind(this);
     }
-    componentDidMount() {
-
-    }
-    componentWillReceiveProps(nextProps, nextContext) {
+    UNSAFE_componentWillReceiveProps(nextProps, nextContext) {
         if(nextProps.title === 'Profile'){
             this.setState({
-                appBarStyle: styles.styleProfile,
                 profile: true
             })
         }else{
             this.setState({
-                appBarStyle: styles.styleNormal,
                 profile: false
             })
         }
@@ -105,14 +96,14 @@ class Nav extends Component {
                         >
                             <DrawerTest userData={this.props.userData} selTest={this.props.title}></DrawerTest>
                         </div>
-                        <Typography variant="caption" fontWeight="fontWeightLight"  style={{position: "absolute", bottom: 0, margin: 10}}> v. ALPHA 0.0.8</Typography>
+                        <Typography variant="caption" fontWeight="fontWeightLight"  style={{position: "absolute", bottom: 0, margin: 10}}> v. ALPHA 0.1.3</Typography>
                     </Drawer>
                     <AppBar position="static" style={this.state.appBarStyle}>
                             {this.state.profile ? <Toolbar>
                                 <IconButton color="inherit" aria-label="Menu" style={styles.menuButton} onClick={this.toggleDrawer('left', true)}>
                                     <MenuIcon />
                                 </IconButton>
-                                <div style={styles.grow}>
+                                <div style={{ flexGrow: 1, marginRight: "50px"}}>
                                     <Avatar style={styles.avatarProfile}></Avatar>
                                 </div>
                             </Toolbar> : <Toolbar>
