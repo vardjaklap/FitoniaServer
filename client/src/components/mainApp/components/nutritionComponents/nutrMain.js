@@ -11,13 +11,13 @@ import Button from "@material-ui/core/Button";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
-import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import amber from "@material-ui/core/colors/amber";
 import green from "@material-ui/core/colors/green";
 import grey from "@material-ui/core/colors/grey";
 import Grow from "@material-ui/core/Grow";
-import { Socket, socketMethods } from '../../../../socket'
+import { Socket} from '../../../../socket'
 
 class NutrMain extends Component {
     _isMounted = false;
@@ -253,7 +253,7 @@ class NutrMain extends Component {
                                         Fats
                                     </Typography>
                                     <Typography variant="body1" color="textSecondary" component="p">
-                                        Fats are needed for construction and maintenance of cell membranes, to maintain a stable body temperature
+                                        Fats are needed for maintenance of cell membranes and to maintain a stable body temperature.
                                     </Typography>
                                     <TextField value={this.state.fatInput  || ''} id="fatInput" name="fatInput" label="Fats" variant="outlined" type="number" style={{marginTop: 10}}  onChange={this.handleInput}/>
                                 </CardContent>
@@ -279,49 +279,49 @@ class NutrMain extends Component {
                             })}
                         >
                             <Grow in unmountOnExit mountOnEnter>
-                            <Card style={{maxWidth: 345, paddingTop: 15, height: "100%"}}>
-                                <Box position="relative" display="inline-flex">
-                                    <div >
-                                        <CircularProgress
-                                            variant="static"
-                                            value={100}
-                                            color="secondary"
-                                            size={150} thickness={4}
-                                        />
-                                        <CircularProgress
-                                            style={{position: 'absolute',
-                                                left: 0,}}
-                                            variant="static" value={this.state.dailyProgress.prot}  size={150} thickness={4} color="primary"
-                                        />
-                                    </div>
-                                    <Box
-                                        top={0}
-                                        left={0}
-                                        bottom={0}
-                                        right={0}
-                                        position="absolute"
-                                        display="flex"
-                                        alignItems="center"
-                                        justifyContent="center"
-                                    >
-                                        <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.prot}/50g</Typography>
+                                <Card style={{maxWidth: 345, paddingTop: 15, height: "100%"}}>
+                                    <Box position="relative" display="inline-flex">
+                                        <div >
+                                            <CircularProgress
+                                                variant="static"
+                                                value={100}
+                                                color="secondary"
+                                                size={150} thickness={4}
+                                            />
+                                            <CircularProgress
+                                                style={{position: 'absolute',
+                                                    left: 0,}}
+                                                variant="static" value={this.state.dailyProgress.carb}  size={150} thickness={4} color="primary"
+                                            />
+                                        </div>
+                                        <Box
+                                            top={0}
+                                            left={0}
+                                            bottom={0}
+                                            right={0}
+                                            position="absolute"
+                                            display="flex"
+                                            alignItems="center"
+                                            justifyContent="center"
+                                        >
+                                            <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.carb}/55g</Typography>
+                                        </Box>
                                     </Box>
-                                </Box>
-                                <CardContent style={{textAlign: "left"}}>
-                                    <Typography gutterBottom variant="h4" component="h2">
-                                        Proteins
-                                    </Typography>
-                                    <Typography variant="body1" color="textSecondary" component="p">
-                                        Proteins are organic compounds that consist of amino acids joined by peptide bonds.
-                                    </Typography>
-                                    <TextField value={this.state.protInput   || ''} id="protInput" name="protInput" label="Proteins" variant="outlined" type="number" style={{marginTop: 10}}  onChange={this.handleInput}/>
-                                </CardContent>
-                                <CardActions>
-                                    <Button color="primary"  onClick={this.handleProt}>
-                                        Add
-                                    </Button>
-                                </CardActions>
-                            </Card>
+                                    <CardContent style={{textAlign: "left"}}>
+                                        <Typography gutterBottom variant="h4" component="h2">
+                                            Carbohydrates
+                                        </Typography>
+                                        <Typography variant="body1" color="textSecondary" component="p">
+                                            Carbohydrates are compounds made up of types of sugar. They are essential to every living organism.
+                                        </Typography>
+                                        <TextField value={this.state.carbInput   || ''} id="carbInput" name="carbInput" label="Carbohydrates" variant="outlined" type="number" style={{marginTop: 10}}  onChange={this.handleInput}/>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button color="primary"  onClick={this.handleCarb}>
+                                            Add
+                                        </Button>
+                                    </CardActions>
+                                </Card>
                             </Grow>
                         </ThemeProvider>
                     </Grid>
@@ -338,49 +338,49 @@ class NutrMain extends Component {
                             })}
                         >
                             <Grow in unmountOnExit mountOnEnter>
-                            <Card style={{maxWidth: 345, paddingTop: 15, height: "100%"}}>
-                                <Box position="relative" display="inline-flex">
-                                    <div >
-                                        <CircularProgress
-                                            variant="static"
-                                            value={100}
-                                            color="secondary"
-                                            size={150} thickness={4}
-                                        />
-                                        <CircularProgress
-                                            style={{position: 'absolute',
-                                                left: 0,}}
-                                            variant="static" value={this.state.dailyProgress.carb}  size={150} thickness={4} color="primary"
-                                        />
-                                    </div>
-                                    <Box
-                                        top={0}
-                                        left={0}
-                                        bottom={0}
-                                        right={0}
-                                        position="absolute"
-                                        display="flex"
-                                        alignItems="center"
-                                        justifyContent="center"
-                                    >
-                                        <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.carb}/55g</Typography>
+                                <Card style={{maxWidth: 345, paddingTop: 15, height: "100%"}}>
+                                    <Box position="relative" display="inline-flex">
+                                        <div >
+                                            <CircularProgress
+                                                variant="static"
+                                                value={100}
+                                                color="secondary"
+                                                size={150} thickness={4}
+                                            />
+                                            <CircularProgress
+                                                style={{position: 'absolute',
+                                                    left: 0,}}
+                                                variant="static" value={this.state.dailyProgress.prot}  size={150} thickness={4} color="primary"
+                                            />
+                                        </div>
+                                        <Box
+                                            top={0}
+                                            left={0}
+                                            bottom={0}
+                                            right={0}
+                                            position="absolute"
+                                            display="flex"
+                                            alignItems="center"
+                                            justifyContent="center"
+                                        >
+                                            <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.prot}/50g</Typography>
+                                        </Box>
                                     </Box>
-                                </Box>
-                                <CardContent style={{textAlign: "left"}}>
-                                    <Typography gutterBottom variant="h4" component="h2">
-                                        Carbohydrates
-                                    </Typography>
-                                    <Typography variant="body1" color="textSecondary" component="p">
-                                        Carbohydrates are compounds made up of types of sugar. Carbohydrates are classified
-                                    </Typography>
-                                    <TextField value={this.state.carbInput   || ''} id="carbInput" name="carbInput" label="Carbohydrates" variant="outlined" type="number" style={{marginTop: 10}}  onChange={this.handleInput}/>
-                                </CardContent>
-                                <CardActions>
-                                    <Button color="primary"  onClick={this.handleCarb}>
-                                        Add
-                                    </Button>
-                                </CardActions>
-                            </Card>
+                                    <CardContent style={{textAlign: "left"}}>
+                                        <Typography gutterBottom variant="h4" component="h2">
+                                            Proteins
+                                        </Typography>
+                                        <Typography variant="body1" color="textSecondary" component="p">
+                                            Proteins are organic compounds that consist of amino acids joined by peptide bonds.
+                                        </Typography>
+                                        <TextField value={this.state.protInput   || ''} id="protInput" name="protInput" label="Proteins" variant="outlined" type="number" style={{marginTop: 10}}  onChange={this.handleInput}/>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button color="primary"  onClick={this.handleProt}>
+                                            Add
+                                        </Button>
+                                    </CardActions>
+                                </Card>
                             </Grow>
                         </ThemeProvider>
                     </Grid>

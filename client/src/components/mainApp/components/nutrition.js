@@ -13,9 +13,6 @@ import KitchenIcon from '@material-ui/icons/Kitchen';
 import FoodBase from "./nutritionComponents/foodBase";
 import NutrMain from "./nutritionComponents/nutrMain"
 
-
-const colors = ["#e53935", "#fb8c00", "#ffeb3b", "#2196f3", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"];
-
 const styles = {
     Paper: {
         padding: "20px",
@@ -80,24 +77,6 @@ class Nutrition extends Component {
                             <Grid item xs={10}>
                                 { this.state.page === 1 ?
                                     <NutrMain command={this.props.command}/>
-                                    // <Container>
-                                    //     <Grid container  direction="column"
-                                    //           justify="center"
-                                    //           alignItems="center" style={{height: "80vh"}}>
-                                    //         <Grid item>
-                                    //             <FastfoodIcon style={{fontSize: "300px"}} color="disabled" />
-                                    //         </Grid>
-                                    //         <Grid item>
-                                    //             <Typography variant="h2" style={{color: "grey"}}>
-                                    //                 I am not finished yet.
-                                    //             </Typography>
-                                    //             <Typography variant="h2" style={{color: "grey"}}>
-                                    //                 Come check next time ;)
-                                    //             </Typography>
-                                    //         </Grid>
-                                    //
-                                    //     </Grid>
-                                    // </Container>
                                     : null }
 
                                 { this.state.page === 2 ?

@@ -67,7 +67,6 @@ class Hydration extends Component {
         this.sendTheme();
     }
     componentWillReceiveProps(nextProps, nextContext) {
-        // console.log(nextProps);
         let newPercent;
         if(Math.round(nextProps.userData.dateData.water.amount * 100 / 3000) > 100){
             newPercent = 100;

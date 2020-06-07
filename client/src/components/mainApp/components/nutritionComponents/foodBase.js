@@ -1,13 +1,10 @@
 import {Component} from "react";
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
 import Paper from "@material-ui/core/Paper";
 import IconButton from "@material-ui/core/IconButton";
-import Tooltip from "@material-ui/core/Tooltip";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from '@material-ui/icons/Search';
-import Divider from "@material-ui/core/Divider";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import Avatar from "@material-ui/core/Avatar";
@@ -18,7 +15,6 @@ import CardActions from "@material-ui/core/CardActions";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Chip from "@material-ui/core/Chip";
 import Button from "@material-ui/core/Button";
-import red from "@material-ui/core/colors/red";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import green from "@material-ui/core/colors/green";
 import Dialog from "@material-ui/core/Dialog";
@@ -230,17 +226,12 @@ class FoodBase extends Component {
                                                     </Grid>
                                                 )}
                                             </Grid>
-                                            {/*<Typography variant="body2" color="textSecondary" component="p">*/}
-                                            {/*    This impressive paella is a perfect party dish and a fun meal to cook together with your*/}
-                                            {/*    guests. Add 1 cup of frozen peas along with the mussels, if you like.*/}
-                                            {/*</Typography>*/}
                                         </CardContent>
                                         <CardActions style={{marginTop: "auto"}}>
                                             <Button color="primary" onClick={() => this.addFood(item)}>Add</Button>
                                             {/*<IconButton aria-label="add to favorites" style={{marginLeft: 'auto'}}>*/}
                                             {/*    <FavoriteIcon />*/}
                                             {/*</IconButton>*/}
-
                                         </CardActions>
                                         </Card>
                                     </Grow>

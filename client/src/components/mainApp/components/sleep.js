@@ -102,7 +102,7 @@ class Sleep extends Component {
         this.props.callBackFromParent("indigo");
     }
     setData(data){
-        if(data.dur == 0){
+        if(data.dur === 0){
             this.setState({
                 enterSleepTurn: 0,
             })
@@ -123,7 +123,7 @@ class Sleep extends Component {
         this.setState({
             enterSleepTurn: 100
         });
-        if(oldValue == 4){
+        if(oldValue === 4){
             let a = moment(this.state.startSleep);
             let b = moment(this.state.endSleep);
             if(a.hour() < 12){

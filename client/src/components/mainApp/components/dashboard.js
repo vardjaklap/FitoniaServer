@@ -1,20 +1,10 @@
 import React, { Component } from 'react';
-import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-// import BottomNavigation from '@material-ui/core/BottomNavigation';
-// import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-// import RestoreIcon from '@material-ui/icons/Restore';
-// import AddBox from '@material-ui/icons/AddBox';
 import Fade from '@material-ui/core/Fade';
 import Typography from "@material-ui/core/Typography";
-import Create from '@material-ui/icons/Create';
-import ReportProblem from '@material-ui/icons/ReportProblem';
-import Toolbar from "@material-ui/core/Toolbar";
-import AppBar from "@material-ui/core/AppBar";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import orange from "@material-ui/core/colors/orange";
 import Gavel from "@material-ui/icons/Gavel";
@@ -23,15 +13,6 @@ import teal from "@material-ui/core/colors/teal";
 import blue from "@material-ui/core/colors/blue";
 import indigo from "@material-ui/core/colors/indigo";
 import {Link} from "react-router-dom";
-import ListItem from "@material-ui/core/ListItem";
-
-
-
-const styles = {
-    Paper: {
-        marginTop: "40px"
-    }
-};
 
 class Dashboard extends Component {
     constructor(props) {
@@ -86,15 +67,14 @@ class Dashboard extends Component {
                     <Container>
                         <Grid container>
                             <Grid item xs={12}>
-                                <Typography gutterBottom variant="h2" style={{margin: "50px 0 20px"}}>Get started here!</Typography>
+                                <Typography gutterBottom variant="h2" style={{margin: "50px 0 40px"}}>Get started here!</Typography>
                             </Grid>
 
                             <Grid item xs={12}>
                                 <Grid container justify="space-evenly"
                                       alignItems="stretch"
                                       spacing={4}>
-
-                                    <Grid item md={3}>
+                                    <Grid item xs={12} sm={6} md={3}>
                                         <Card style={{height: "100%"}}>
                                             <CardActionArea component={Link} to="/app/training" style={{height: "100%"}}>
                                                 <div style={{height: "150px", width: "100%", backgroundColor: orange[500]}}>
@@ -115,7 +95,7 @@ class Dashboard extends Component {
                                             </CardActionArea>
                                         </Card>
                                     </Grid>
-                                    <Grid item md={3}>
+                                    <Grid item xs={12} sm={6}  md={3}>
                                         <Card style={{height: "100%"}}>
                                             <CardActionArea component={Link} to="/app/nutrition" style={{height: "100%"}}>
                                                 <div style={{height: "150px", width: "100%", backgroundColor: teal[500]}}>
@@ -137,7 +117,7 @@ class Dashboard extends Component {
                                             </CardActionArea>
                                         </Card>
                                     </Grid>
-                                    <Grid item md={3}>
+                                    <Grid item xs={12} sm={6}  md={3}>
                                         <Card style={{height: "100%"}}>
                                             <CardActionArea component={Link} to="/app/hydration" style={{height: "100%"}}>
                                                 <div style={{height: "150px", width: "100%", backgroundColor: blue[500]}}>
@@ -158,7 +138,7 @@ class Dashboard extends Component {
                                             </CardActionArea>
                                         </Card>
                                     </Grid>
-                                    <Grid item md={3}>
+                                    <Grid item xs={12} sm={6}  md={3}>
                                         <Card style={{height: "100%"}}>
                                             <CardActionArea component={Link} to="/app/sleep" style={{height: "100%"}}>
                                                 <div style={{height: "150px", width: "100%", backgroundColor: indigo[500]}}>

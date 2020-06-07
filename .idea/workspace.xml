@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/foodBase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrMain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/meditation.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/meditation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutrition.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutrition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/foodBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/foodBase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrHistory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/sleep.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/sleep.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/sleepComponents/sleepHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/sleepComponents/sleepHistory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/training.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/waterComponents/waterHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/waterComponents/waterHistory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +146,8 @@
       <workItem from="1591144397417" duration="5203000" />
       <workItem from="1591221480314" duration="8832000" />
       <workItem from="1591399635185" duration="7681000" />
-      <workItem from="1591482780818" duration="7058000" />
+      <workItem from="1591482780818" duration="8069000" />
+      <workItem from="1591567918218" duration="1290000" />
     </task>
     <servers />
   </component>

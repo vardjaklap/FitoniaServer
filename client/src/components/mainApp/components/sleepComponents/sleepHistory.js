@@ -19,12 +19,12 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 
 const data = [
     {name: 'Day 1', SleepDur: "9h 20m", Quality: 5, message: ""},
-    {name: 'Day 2', SleepDur: "9h 20m", Quality: 4, message: "234"},
-    {name: 'Day 3', SleepDur: "9h 20m", Quality: 3, message: "23"},
-    {name: 'Day 4', SleepDur: "9h 20m", Quality: 0, message: "54t"},
-    {name: 'Day 5', SleepDur: "9h 20m", Quality: 1, message: "32r"},
-    {name: 'Day 6', SleepDur: "9h 20m", Quality: 4, message: "23r"},
-    {name: 'Day 7', SleepDur: "9h 20m", Quality: 3, message: "w4r"},
+    {name: 'Day 2', SleepDur: "9h 20m", Quality: 4, message: "This is a test"},
+    {name: 'Day 3', SleepDur: "9h 20m", Quality: 3, message: "This is a test"},
+    {name: 'Day 4', SleepDur: "9h 20m", Quality: 0, message: "This is a test"},
+    {name: 'Day 5', SleepDur: "9h 20m", Quality: 1, message: "This is a test"},
+    {name: 'Day 6', SleepDur: "9h 20m", Quality: 4, message: "This is a test"},
+    {name: 'Day 7', SleepDur: "9h 20m", Quality: 3, message: "This is a test"},
 ];
 const styles = {
     headerCell: {

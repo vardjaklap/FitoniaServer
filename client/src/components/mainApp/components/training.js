@@ -13,10 +13,9 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
-
 import exerciseData from "./trainingData/exercises.json";
 import Dialog from "@material-ui/core/Dialog";
-import CardActions from "@material-ui/core/CardActions";
+
 
 const styles = {
     Paper: {
@@ -157,7 +156,7 @@ class Training extends Component {
                 <section id="Training" >
                     <Container>
                         <Grid container justify="space-evenly">
-                            <Grid item xs={4}>
+                            <Grid item xs={12} md={4}>
                                 <Paper style={styles.Paper}>
                                     <Grid container>
                                         <Grid item xs={12}>
@@ -202,7 +201,7 @@ class Training extends Component {
                                     </Grid>
                                 </Paper>
                             </Grid>
-                            <Grid item xs={4}>
+                            <Grid item xs={12} md={4}>
                                 <Paper style={styles.Paper}>
                                     <Grid container>
                                         <Grid item xs={12}>
