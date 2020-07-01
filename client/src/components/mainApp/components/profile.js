@@ -5,6 +5,8 @@ import Fade from '@material-ui/core/Fade';
 import Container from "@material-ui/core/Container";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import {Link} from "react-router-dom";
+import ListItem from "@material-ui/core/ListItem";
 
 
 const styles = {
@@ -139,6 +141,15 @@ class Profile extends Component {
                 <section id="Profile">
                     <Container>
                         <Grid container justify="center">
+                            <Grid item xs={12}>
+                                <Grid container justify="center">
+                                    <Grid item xs={12} sm={6}>
+                                        <Button variant="contained" color="primary" style={{height: "100px", width: "100%", marginTop: "20px"}} component={Link} to="/app/evaluation">
+                                            The Evaluation
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Paper style={styles.Paper}>
                                     <Grid container>

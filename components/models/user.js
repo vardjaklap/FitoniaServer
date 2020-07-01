@@ -13,6 +13,24 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    gender: {
+        type: Number
+    },
+    age: {
+        type: Number
+    },
+    height: {
+        type: Number
+    },
+    weight: {
+        type: Number
+    },
+    frequency: {
+        type: Number
+    },
+    goal: {
+        type: Number
+    },
     email: {
         type: String,
         unique: true,
@@ -167,9 +185,60 @@ userSchema.methods.updateProfile = async function (info) {
     }
     await user.save();
 }
+userSchema.methods.setEvalToDefault = async function () {
+    let user = this;
+    user.gender = 0;
+    user.age = 25;
+    user.height = 175;
+    user.weight = 75;
+    user.frequency = 0;
+    user.goal = 2;
+    await user.save();
+}
 userSchema.methods.getNutrData = async function () {
     let user = this;
-    return user.entries[user.entries.length - 1].nutr;
+    //set parameters to a default if not set
+    if(user.weight === null){
+        await userSchema.methods.setEvalToDefault();
+    }
+    //calculating goals for the day
+    // 0 - lose weight
+    // 1 - gain muscle
+    // 2 - stay fit
+    let calGoal = 0;
+    let protGoal = 0;
+    let fatGoal = 0;
+    let carbGoal = 230;
+    if(user.goal == 0){
+        calGoal = 1800;
+        fatGoal = 40;
+        protGoal = user.weight;
+    }else if(user.goal == 1){
+        calGoal = 2500;
+        fatGoal = 70;
+        protGoal = Math.round(user.weight * 1.5);
+    }else if(user.goal == 2){
+        calGoal = 2200;
+        fatGoal = 60;
+        protGoal = Math.round(user.weight * 0.8);
+    }else{
+        calGoal = 2100;
+        fatGoal = 55;
+        protGoal = Math.round(user.weight * 0.8);
+    }
+
+
+    let nutrGoal = {
+        cal: calGoal,
+        fat: fatGoal,
+        carb: carbGoal,
+        prot: protGoal
+    }
+    let nutrObj = {
+        currentEntry: user.entries[user.entries.length - 1].nutr,
+        goal: nutrGoal
+    }
+    return nutrObj;
 }
 userSchema.methods.addFoodEntry = async function (values) {
     let user = this;
@@ -191,6 +260,16 @@ userSchema.methods.addSleepEntry = async function (sleepObj) {
     sleep.dur = sleepObj.dur;
     sleep.quality = sleepObj.quality;
     sleep.note = sleepObj.note;
+    await user.save();
+}
+userSchema.methods.updateEvaluation = async function (evalObj) {
+    let user = this;
+    user.gender = evalObj.gender;
+    user.age = evalObj.age;
+    user.height = evalObj.height;
+    user.weight = evalObj.weight;
+    user.frequency = evalObj.frequency;
+    user.goal = evalObj.goal;
     await user.save();
 }
 

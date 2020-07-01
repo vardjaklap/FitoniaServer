@@ -21,6 +21,10 @@ import deepPurple from "@material-ui/core/colors/deepPurple";
 
 import teal from "@material-ui/core/es/colors/teal";
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Evaluation from "./components/eval";
+import cyan from "@material-ui/core/colors/cyan";
+import blueGrey from "@material-ui/core/colors/blueGrey";
+import deepOrange from "@material-ui/core/colors/deepOrange";
 
 
 export class MainApp extends Component {
@@ -65,9 +69,12 @@ export class MainApp extends Component {
         }else if(dataFromChild === "deepPurple"){
             newColor = deepPurple[500];
             newTitle = "Meditation";
+        }else if(dataFromChild === "evaluation"){
+            newColor = deepOrange[800];
+            newTitle = "Evaluation";
         }else if(dataFromChild === "profile"){
-            newColor = deepPurple[500];
-            newTitle = "Profile";
+            newColor = deepOrange[800];
+            newTitle = "Evaluation";
         }
         let newTheme = createMuiTheme({
             palette: {
@@ -106,6 +113,7 @@ export class MainApp extends Component {
                             <Route key="/app/sleep" exact={true} path="/app/sleep" render={() => <Sleep callBackFromParent={this.myCallback} userData={this.props.userData}/>} />
                             <Route key="/app/meditation" exact={true} path="/app/meditation" render={() => <Meditation callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
                             <Route key="/app/profile" exact={true} path="/app/profile" render={() => <Profile command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
+                            <Route key="/app/evaluation" exact={true} path="/app/evaluation" render={() => <Evaluation command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
                         </div>
                     </CssBaseline>
                 </MuiThemeProvider>

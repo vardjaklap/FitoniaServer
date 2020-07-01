@@ -36,6 +36,12 @@ class NutrMain extends Component {
                 carb: 0,
                 prot: 0
             },
+            goal: {
+                cal: 2000,
+                fat: 60,
+                carb: 200,
+                prot: 100
+            },
             calInput: "",
             fatInput: "",
             carbInput: "",
@@ -47,13 +53,7 @@ class NutrMain extends Component {
         this.handleProt = this.handleProt.bind(this);
         this.handleCarb = this.handleCarb.bind(this);
         Socket.on('getNutrInfo', (data) => {
-            let obj = {
-                cal: data.cal,
-                fat: data.fat,
-                carb: data.carb,
-                prot: data.prot
-            };
-            this.checkProgress(obj)
+            this.checkProgress(data)
         })
     }
     componentDidMount() {
@@ -63,12 +63,11 @@ class NutrMain extends Component {
     componentWillUnmount() {
         this._isMounted = false;
     }
-
     checkProgress(data){
-        let progCal = Math.round((data.cal / 2000) * 100);
-        let progFat = Math.round((data.fat / 60) * 100);
-        let progProt = Math.round((data.prot / 100) * 100);
-        let progCarb = Math.round((data.carb / 55) * 100);
+        let progCal = Math.round((data.currentEntry.cal / data.goal.cal) * 100);
+        let progFat = Math.round((data.currentEntry.fat / data.goal.fat) * 100);
+        let progProt = Math.round((data.currentEntry.prot / data.goal.prot) * 100);
+        let progCarb = Math.round((data.currentEntry.carb / data.goal.carb) * 100);
 
         if(progCal > 100){
             progCal = 100;
@@ -85,13 +84,14 @@ class NutrMain extends Component {
         if (this._isMounted) {
             setTimeout(() => {
                 this.setState({
-                    dataToDisplay: data,
+                    dataToDisplay: data.currentEntry,
                     dailyProgress: {
                         cal: progCal,
                         fat: progFat,
                         carb: progCarb,
                         prot: progProt
-                    }
+                    },
+                    goal: data.goal
                 })
 
             }, 200);
@@ -185,7 +185,7 @@ class NutrMain extends Component {
                                         alignItems="center"
                                         justifyContent="center"
                                     >
-                                        <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.cal}/2000kc</Typography>
+                                        <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.cal}/{this.state.goal.cal}kc</Typography>
                                     </Box>
                                 </Box>
                                 <CardContent style={{textAlign: "left"}}>
@@ -245,7 +245,7 @@ class NutrMain extends Component {
                                         alignItems="center"
                                         justifyContent="center"
                                     >
-                                        <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.fat}/60g</Typography>
+                                        <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.fat}/{this.state.goal.fat}g</Typography>
                                     </Box>
                                 </Box>
                                 <CardContent style={{textAlign: "left"}}>
@@ -304,7 +304,7 @@ class NutrMain extends Component {
                                             alignItems="center"
                                             justifyContent="center"
                                         >
-                                            <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.carb}/55g</Typography>
+                                            <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.carb}/{this.state.goal.carb}g</Typography>
                                         </Box>
                                     </Box>
                                     <CardContent style={{textAlign: "left"}}>
@@ -363,7 +363,7 @@ class NutrMain extends Component {
                                             alignItems="center"
                                             justifyContent="center"
                                         >
-                                            <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.prot}/50g</Typography>
+                                            <Typography variant="h6" component="div" color="textSecondary">{this.state.dataToDisplay.prot}/{this.state.goal.prot}g</Typography>
                                         </Box>
                                     </Box>
                                     <CardContent style={{textAlign: "left"}}>

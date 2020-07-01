@@ -123,6 +123,17 @@ io.on('connection', function(socket){
             socket.emit('reload');
         }
     });
+    socket.on('updateEvaluation', async function(evalObj){
+        try{
+            const user = await verifyAuth(currentToken);
+            await user.updateEvaluation(evalObj);
+            socket.emit('alert', 'success', 'Evaluation updated!')
+            socket.emit('reload');
+        }catch(e){
+            socket.emit('alert','error', 'Error while updating! Please reload!');
+            socket.emit('reload');
+        }
+    });
 });
 server.listen(port, () => {
     console.log(`Server is up on port ${port}!`)
