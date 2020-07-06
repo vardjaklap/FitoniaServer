@@ -226,8 +226,6 @@ userSchema.methods.getNutrData = async function () {
         fatGoal = 55;
         protGoal = Math.round(user.weight * 0.8);
     }
-
-
     let nutrGoal = {
         cal: calGoal,
         fat: fatGoal,

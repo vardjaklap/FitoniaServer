@@ -8,6 +8,7 @@ import Notepad from "./components/notepad";
 import Sleep from "./components/sleep";
 import Meditation from "./components/meditation";
 import Profile from './components/profile'
+import NewFood from "./components/tools/createNewFood";
 import {  Route } from "react-router-dom";
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import {createMuiTheme} from "@material-ui/core";
@@ -76,6 +77,10 @@ export class MainApp extends Component {
             newColor = deepOrange[800];
             newTitle = "Evaluation";
         }
+        else if(dataFromChild === "tools"){
+            newColor = blueGrey[500];
+            newTitle = "Tools";
+        }
         let newTheme = createMuiTheme({
             palette: {
                 primary: {main: newColor}
@@ -114,6 +119,7 @@ export class MainApp extends Component {
                             <Route key="/app/meditation" exact={true} path="/app/meditation" render={() => <Meditation callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
                             <Route key="/app/profile" exact={true} path="/app/profile" render={() => <Profile command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
                             <Route key="/app/evaluation" exact={true} path="/app/evaluation" render={() => <Evaluation command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
+                            <Route key="/app/tools" exact={true} path="/app/tools" render={() => <NewFood command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
                         </div>
                     </CssBaseline>
                 </MuiThemeProvider>

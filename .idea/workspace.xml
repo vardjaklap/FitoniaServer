@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/eval.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/tools/createNewFood.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +142,9 @@
       <workItem from="1593047702387" duration="1888000" />
       <workItem from="1593101172214" duration="2466000" />
       <workItem from="1593479601782" duration="2896000" />
-      <workItem from="1593639937587" duration="5278000" />
+      <workItem from="1593639937587" duration="7272000" />
+      <workItem from="1593877271144" duration="2341000" />
+      <workItem from="1594047254290" duration="6204000" />
     </task>
     <servers />
   </component>
@@ -179,14 +179,14 @@
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
     <state x="658" y="282" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1030@0.0.1920.1030" timestamp="1590797048782" />
-    <state x="686" y="207" key="FileChooserDialogImpl" timestamp="1586732000392">
+    <state x="686" y="207" key="FileChooserDialogImpl" timestamp="1594057637488">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state x="686" y="207" key="FileChooserDialogImpl/0.0.1920.1030@0.0.1920.1030" timestamp="1586732000392" />
-    <state x="226" y="0" key="new project wizard" timestamp="1585846437600">
+    <state x="686" y="207" key="FileChooserDialogImpl/0.0.1920.1030@0.0.1920.1030" timestamp="1594057637488" />
+    <state x="226" y="0" width="1467" height="773" key="new project wizard" timestamp="1594047451287">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>
-    <state x="226" y="0" key="new project wizard/0.0.1920.1030@0.0.1920.1030" timestamp="1585846437600" />
+    <state x="226" y="0" width="1467" height="773" key="new project wizard/0.0.1920.1030@0.0.1920.1030" timestamp="1594047451287" />
     <state x="531" y="226" key="run.anything.popup" timestamp="1593480400144">
       <screen x="0" y="0" width="1920" height="1030" />
     </state>

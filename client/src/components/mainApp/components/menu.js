@@ -120,7 +120,7 @@ class Nav extends Component {
                                         onClose={this.handleClose}
                                     >
                                         <MenuItem button onClick={this.handleClose} component={Link} to="/app/profile">Profile</MenuItem>
-                                        {/*<MenuItem onClick={this.handleClose}>My account</MenuItem>*/}
+                                        <MenuItem onClick={this.handleClose} component={Link} to="/app/tools">Tools</MenuItem>
                                         <MenuItem onClick={this.handleLogout}>Logout</MenuItem>
                                     </Menu>
                                 </div>
