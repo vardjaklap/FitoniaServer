@@ -99,7 +99,7 @@ export class MainApp extends Component {
         this.props.test();
     }
     componentDidMount() {
-        console.log(this.props)
+        //console.log(this.props)
     }
 
     render() {

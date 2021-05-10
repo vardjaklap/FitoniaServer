@@ -11,7 +11,7 @@ export const socketMethods = {
           Socket.emit('isAuth', token)
           return true;
       }else{
-          console.log('No user found!')
+          //console.log('No user found!')
           return false;
       }
   },

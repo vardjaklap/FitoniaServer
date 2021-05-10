@@ -59,6 +59,8 @@ class Login extends Component {
         };
         this.complete = this.complete.bind(this);
         this.validateForm = this.validateForm.bind(this);
+        this.loginAsTestUser = this.loginAsTestUser.bind(this);
+
     }
     complete(e){
         e.preventDefault();
@@ -69,6 +71,13 @@ class Login extends Component {
             };
             this.props.callBackFromParent('login', info);
         }
+    }
+    loginAsTestUser(){
+        let info = {
+            email: "testing_account@somemail.com",
+            pass: "testingaccount"
+        };
+        this.props.callBackFromParent('login', info);
     }
     validateForm(){
         const fields = ['email', 'pass'];
@@ -178,6 +187,14 @@ class Login extends Component {
                                 </Link>
                             </Grid>
                         </Grid>
+                        <Grid container justify="flex-end">
+                            <Grid item>
+                                <Button  variant="contained" color="primary" onClick={this.loginAsTestUser}>
+                                    Sign in with existing test account
+                                </Button>
+                            </Grid>
+                        </Grid>
+
                     </form>
                 </Paper>
             </Container>
