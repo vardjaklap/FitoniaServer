@@ -81,7 +81,7 @@ class DrawerTest extends Component {
                 </div>
 
                 <List>
-                    <Grid container justify="center">
+                    <Grid container justifyContent="center">
                         <Grid item xs={4}>
                             <Cloud style={{color: 'grey', fontSize: '2rem'}}></Cloud>
                             <Box>  19°C</Box>

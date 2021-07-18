@@ -11,7 +11,7 @@ import Profile from './components/profile'
 import NewFood from "./components/tools/createNewFood";
 import {  Route } from "react-router-dom";
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import {createMuiTheme} from "@material-ui/core";
+import {createTheme} from "@material-ui/core";
 
 import red from '@material-ui/core/colors/red';
 import orange from "@material-ui/core/colors/orange";
@@ -32,7 +32,7 @@ export class MainApp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            theme: createMuiTheme({
+            theme: createTheme({
                 palette: {
                     primary: red
                 },
@@ -81,7 +81,7 @@ export class MainApp extends Component {
             newColor = blueGrey[500];
             newTitle = "Tools";
         }
-        let newTheme = createMuiTheme({
+        let newTheme = createTheme({
             palette: {
                 primary: {main: newColor}
                 // type: "dark"
@@ -119,7 +119,7 @@ export class MainApp extends Component {
                             <Route key="/app/meditation" exact={true} path="/app/meditation" render={() => <Meditation callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
                             <Route key="/app/profile" exact={true} path="/app/profile" render={() => <Profile command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
                             <Route key="/app/evaluation" exact={true} path="/app/evaluation" render={() => <Evaluation command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
-                            <Route key="/app/tools" exact={true} path="/app/tools" render={() => <NewFood command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>
+                            {/*<Route key="/app/tools" exact={true} path="/app/tools" render={() => <NewFood command={this.props.callBackFromParent} callBackFromParent={this.myCallback} userData={this.props.userData}/>}/>*/}
                         </div>
                     </CssBaseline>
                 </MuiThemeProvider>

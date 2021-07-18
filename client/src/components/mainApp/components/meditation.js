@@ -139,7 +139,7 @@ class Meditation extends Component {
             <Fade in={this.state.checked}>
                 <section id="Meditation" >
                             {/*<Grid container  direction="column"*/}
-                            {/*      justify="center"*/}
+                            {/*      justifyContent="center"*/}
                             {/*      alignItems="center" style={{height: "80vh"}}>*/}
                             {/*    <Grid item>*/}
                             {/*        <SpaIcon style={{fontSize: "300px"}} color="disabled" />*/}
@@ -194,7 +194,7 @@ class Meditation extends Component {
                                         <Grid item xs={6}
                                               container
                                               direction="column"
-                                              justify="space-evenly"
+                                              justifyContent="space-evenly"
                                               alignItems="stretch">
                                             <Grid item>
                                                 <Typography variant="h5" style={{color: "grey"}}>
@@ -214,7 +214,7 @@ class Meditation extends Component {
                                 </Container> : <div>
                                     <Grow in={this.state.meditationActive === false}>
                                         <Grid container  direction="column"
-                                              justify="center"
+                                              justifyContent="center"
                                               alignItems="center" style={{height: "80vh"}}
                                         >
                                             <Grid item>

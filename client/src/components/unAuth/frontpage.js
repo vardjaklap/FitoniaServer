@@ -43,11 +43,11 @@ function FrontPage() {
                 <Grid item style={{height: "20px", width: "calc(100% / 7)", backgroundColor: "#673ab7"}}></Grid>
             </Grid>
             <Container component="main">
-                <Grid container justify="center" alignItems="center">
+                <Grid container justifyContent="center" alignItems="center">
                     <Grid item xs={12} md={8}>
-                        <Grid container style={{minHeight: "70vh"}} justify="center" alignItems="center" spacing={1}>
+                        <Grid container style={{minHeight: "70vh"}} justifyContent="center" alignItems="center" spacing={1}>
                             <Grid item xs={12} md={4}>
-                                <Grid container justify="center">
+                                <Grid container justifyContent="center">
                                     <Grid item>
                                         <img src={logoBid} alt="" style={styles.log}/>
                                     </Grid>
@@ -55,12 +55,12 @@ function FrontPage() {
                             </Grid>
                             <Grid item xs={12} md={5}>
                                 <Grid container >
-                                    <Grid container justify="center">
+                                    <Grid container justifyContent="center">
                                         <Typography variant="h2" color="primary"  style={styles.text} gutterBottom>
                                             ФITONIA
                                         </Typography>
                                     </Grid>
-                                    <Grid container justify="center">
+                                    <Grid container justifyContent="center">
                                         <Button href="/login" color="primary" variant="contained" size="large" style={styles.button}>
                                             Login
                                         </Button>
@@ -74,7 +74,7 @@ function FrontPage() {
                     </Grid>
                 </Grid>
 
-                <Grid container justify="center">
+                <Grid container justifyContent="center">
                     <Grid item>
                         <Typography variant="h3" color="primary"  style={styles.text} gutterBottom>
                             Your new You begins today

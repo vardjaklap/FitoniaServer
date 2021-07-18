@@ -180,14 +180,14 @@ class Login extends Component {
                         >
                             Sign In
                         </Button>
-                        <Grid container justify="flex-end">
+                        <Grid container justifyContent="flex-end">
                             <Grid item>
                                 <Link href="/register" variant="body2">
                                     Don't have an account? Sign up
                                 </Link>
                             </Grid>
                         </Grid>
-                        <Grid container justify="flex-end">
+                        <Grid container justifyContent="flex-end">
                             <Grid item>
                                 <Button  variant="contained" color="primary" onClick={this.loginAsTestUser}>
                                     Sign in with existing test account

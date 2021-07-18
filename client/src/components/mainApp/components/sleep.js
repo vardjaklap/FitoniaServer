@@ -202,10 +202,10 @@ class Sleep extends Component {
                 <section id="Sleep" >
                     { this.state.page === 0 ?
                         <Fade in={this.state.page === 0} >
-                            <Grid container justify="center">
+                            <Grid container justifyContent="center">
                                 <Grow in={this.state.enterSleepTurn === 0} unmountOnExit mountOnEnter>
                                     <Grid container  direction="column"
-                                          justify="center"
+                                          justifyContent="center"
                                           alignItems="center" style={{height: "80vh"}}
                                     >
                                         <Grid item>
@@ -234,7 +234,7 @@ class Sleep extends Component {
                                             <Typography gutterBottom variant="h5" component="h2" style={{marginBottom: "20px"}}>
                                                 Sleep duration
                                             </Typography>
-                                            <Grid container justify="space-between"  direction="column">
+                                            <Grid container justifyContent="space-between"  direction="column">
                                                 <MuiPickersUtilsProvider utils={MomentUtils}>
                                                     <KeyboardTimePicker
                                                         label="Start"
@@ -254,7 +254,7 @@ class Sleep extends Component {
                                             </Grid>
                                         </CardContent>
                                         <CardActions>
-                                            <Grid container justify="space-between">
+                                            <Grid container justifyContent="space-between">
                                                 <Button size="small" color="primary" onClick={this.handleBack}>
                                                     Cancel
                                                 </Button>
@@ -273,14 +273,14 @@ class Sleep extends Component {
                                             <Typography gutterBottom variant="h5" component="h2" style={{marginBottom: "20px"}}>
                                                 Rate your sleep
                                             </Typography>
-                                            <Grid container justify="center">
+                                            <Grid container justifyContent="center">
                                                 <Rating name="size-large" defaultValue={3} size="large" value={this.state.rating} onChange={(event, newValue) => {
                                                     this.changeRating(newValue);
                                                 }}/>
                                             </Grid>
                                         </CardContent>
                                         <CardActions>
-                                            <Grid container justify="space-between">
+                                            <Grid container justifyContent="space-between">
                                                 <Button size="small" color="primary" onClick={this.handleBack}>
                                                     Back
                                                 </Button>
@@ -299,7 +299,7 @@ class Sleep extends Component {
                                             <Typography gutterBottom variant="h5" component="h2" style={{marginBottom: "20px"}}>
                                                 Add your notes
                                             </Typography>
-                                            <Grid container justify="center">
+                                            <Grid container justifyContent="center">
                                                 <TextField
                                                     id="outlined-multiline-static"
                                                     label="Describe your sleep"
@@ -313,7 +313,7 @@ class Sleep extends Component {
                                             </Grid>
                                         </CardContent>
                                         <CardActions>
-                                            <Grid container justify="space-between">
+                                            <Grid container justifyContent="space-between">
                                                 <Button size="small" color="primary" onClick={this.handleBack}>
                                                     Back
                                                 </Button>
@@ -326,7 +326,7 @@ class Sleep extends Component {
                                 </Grow>
                                 <Grow in={this.state.enterSleepTurn === 4} unmountOnExit mountOnEnter>
                                     <Grid container  direction="column"
-                                          justify="center"
+                                          justifyContent="center"
                                           alignItems="center" style={{height: "80vh"}}
                                     >
                                         <Grid item>
@@ -339,7 +339,7 @@ class Sleep extends Component {
                                         </Grid>
                                         <Grid item>
                                             <Card style={{padding: 20, margin: "20px 0 0 "}}>
-                                                <Grid container justify="space-evenly" spacing={3}>
+                                                <Grid container justifyContent="space-evenly" spacing={3}>
                                                     <Grid item>
                                                         <Typography variant="h5">
                                                             {this.state.hoursSlept} hours {this.state.minutesSlept} minutes
@@ -363,7 +363,7 @@ class Sleep extends Component {
                         : null }
                     { this.state.page === 1 ?
                         <Fade in={this.state.page === 1}>
-                            <Grid container justify="center">
+                            <Grid container justifyContent="center">
                                 <Grid item xs={12} sm={10} md={8}>
                                     <Paper style={{marginTop: 30}}  elevation={1}>
                                         <SleepHistory></SleepHistory>

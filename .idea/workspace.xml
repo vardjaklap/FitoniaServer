@@ -40,11 +40,30 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/styles/animations.module.css" afterDir="false" />
+    <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="Added new muscle selection menu for training. Small bug fixes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/eval.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/eval.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/layouts/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/layouts/drawer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/meditation.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/meditation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/notepad.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/notepad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutrition.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutrition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/foodBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/foodBase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrHistory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/sleep.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/sleep.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/tools/createNewFood.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/tools/createNewFood.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/training.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/registrationpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/registrationpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/unauth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/unauth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +90,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.16.1" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.44" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/mainApp/components/trainingData" />
+    <property name="javascript.nodejs.core.library.configured.version" value="16.4.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="16.3.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -82,12 +101,29 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vardjaklap\Documents\Programming\node\fitonia\client\src\components\unAuth" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\vardjaklap\Documents\Programming\node\fitonia\client\src\components\mainApp\components\trainingData" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vardjaklap\Documents\Programming\node\fitonia\client\src\components\unAuth" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -191,6 +227,17 @@
       <workItem from="1620661452406" duration="791000" />
       <workItem from="1620839675444" duration="6443000" />
       <workItem from="1620851680425" duration="3164000" />
+      <workItem from="1620855136994" duration="630000" />
+      <workItem from="1620941283595" duration="607000" />
+      <workItem from="1621538742336" duration="70000" />
+      <workItem from="1621615411267" duration="617000" />
+      <workItem from="1625261144892" duration="376000" />
+      <workItem from="1626133394707" duration="27000" />
+      <workItem from="1626547413351" duration="5806000" />
+      <workItem from="1626557224786" duration="814000" />
+      <workItem from="1626558063699" duration="3687000" />
+      <workItem from="1626628522687" duration="3102000" />
+      <workItem from="1626631661048" duration="108000" />
     </task>
     <servers />
   </component>
@@ -216,22 +263,42 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1513" height="239" key="GridCell.Tab.0.bottom" timestamp="1620335841981">
+    <state x="524" y="281" key="#Notifications" timestamp="1626558071387">
+      <screen x="0" y="0" width="1536" height="920" />
+    </state>
+    <state x="524" y="281" key="#Notifications/0.0.1536.920@0.0.1536.920" timestamp="1626558071387" />
+    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1626631710608">
+      <screen x="0" y="0" width="1536" height="920" />
+    </state>
+    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.920@0.0.1536.920" timestamp="1626631710608" />
+    <state width="1515" height="236" key="GridCell.Tab.0.bottom" timestamp="1626557657015">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state width="1513" height="239" key="GridCell.Tab.0.bottom/0.0.1536.920/-2560.485.1463.783@0.0.1536.920" timestamp="1620335841981" />
-    <state width="1513" height="239" key="GridCell.Tab.0.center" timestamp="1620335841981">
+    <state width="1515" height="236" key="GridCell.Tab.0.bottom/0.0.1536.920@0.0.1536.920" timestamp="1626557657015" />
+    <state width="1515" height="236" key="GridCell.Tab.0.center" timestamp="1626557657015">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state width="1513" height="239" key="GridCell.Tab.0.center/0.0.1536.920/-2560.485.1463.783@0.0.1536.920" timestamp="1620335841981" />
-    <state width="1513" height="239" key="GridCell.Tab.0.left" timestamp="1620335841981">
+    <state width="1515" height="236" key="GridCell.Tab.0.center/0.0.1536.920@0.0.1536.920" timestamp="1626557657015" />
+    <state width="1515" height="236" key="GridCell.Tab.0.left" timestamp="1626557657015">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state width="1513" height="239" key="GridCell.Tab.0.left/0.0.1536.920/-2560.485.1463.783@0.0.1536.920" timestamp="1620335841981" />
-    <state width="1513" height="239" key="GridCell.Tab.0.right" timestamp="1620335841981">
+    <state width="1515" height="236" key="GridCell.Tab.0.left/0.0.1536.920@0.0.1536.920" timestamp="1626557657015" />
+    <state width="1515" height="236" key="GridCell.Tab.0.right" timestamp="1626557657015">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state width="1513" height="239" key="GridCell.Tab.0.right/0.0.1536.920/-2560.485.1463.783@0.0.1536.920" timestamp="1620335841981" />
+    <state width="1515" height="236" key="GridCell.Tab.0.right/0.0.1536.920@0.0.1536.920" timestamp="1626557657015" />
+    <state x="587" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626631232445">
+      <screen x="0" y="0" width="1536" height="920" />
+    </state>
+    <state x="587" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.920@0.0.1536.920" timestamp="1626631232445" />
+    <state x="479" y="36" width="579" height="849" key="find.popup" timestamp="1626630228656">
+      <screen x="0" y="0" width="1536" height="920" />
+    </state>
+    <state x="479" y="36" width="579" height="849" key="find.popup/0.0.1536.920@0.0.1536.920" timestamp="1626630228656" />
   </component>
   <component name="masterDetails">
     <states>

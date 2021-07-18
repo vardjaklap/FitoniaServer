@@ -29,10 +29,10 @@ class NutrHistory extends Component {
     render() {
         return (
             <section id="SleepHist" >
-                <Grid container justify={"space-evenly"}>
+                <Grid container justifyContent={"space-evenly"}>
                     <Grid item xs={7}>
                         <Paper style={{width: "100%", padding: "20px"}}>
-                            <Grid container justify="space-around">
+                            <Grid container justifyContent="space-around">
                                 <Grid>
                                     <Typography variant="h5" color="primary">
                                         29/05

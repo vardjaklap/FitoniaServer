@@ -71,14 +71,14 @@ class Dashboard extends Component {
                             </Grid>
 
                             <Grid item xs={12}>
-                                <Grid container justify="space-evenly"
+                                <Grid container justifyContent="space-evenly"
                                       alignItems="stretch"
                                       spacing={4}>
                                     <Grid item xs={12} sm={6} md={3}>
                                         <Card style={{height: "100%"}}>
                                             <CardActionArea component={Link} to="/app/training" style={{height: "100%"}}>
                                                 <div style={{height: "150px", width: "100%", backgroundColor: orange[500]}}>
-                                                    <Grid container justify="center"
+                                                    <Grid container justifyContent="center"
                                                           alignItems="center"
                                                           style={{height: "100%"}}>
                                                         <Gavel style={{fontSize: 65, color: "white"}}/>
@@ -99,7 +99,7 @@ class Dashboard extends Component {
                                         <Card style={{height: "100%"}}>
                                             <CardActionArea component={Link} to="/app/nutrition" style={{height: "100%"}}>
                                                 <div style={{height: "150px", width: "100%", backgroundColor: teal[500]}}>
-                                                    <Grid container justify="center"
+                                                    <Grid container justifyContent="center"
                                                           alignItems="center"
                                                           style={{height: "100%"}}
                                                           >
@@ -121,7 +121,7 @@ class Dashboard extends Component {
                                         <Card style={{height: "100%"}}>
                                             <CardActionArea component={Link} to="/app/hydration" style={{height: "100%"}}>
                                                 <div style={{height: "150px", width: "100%", backgroundColor: blue[500]}}>
-                                                    <Grid container justify="center"
+                                                    <Grid container justifyContent="center"
                                                           alignItems="center"
                                                           style={{height: "100%"}}>
                                                         <Opacity style={{fontSize: 65, color: "white"}}/>
@@ -142,7 +142,7 @@ class Dashboard extends Component {
                                         <Card style={{height: "100%"}}>
                                             <CardActionArea component={Link} to="/app/sleep" style={{height: "100%"}}>
                                                 <div style={{height: "150px", width: "100%", backgroundColor: indigo[500]}}>
-                                                    <Grid container justify="center"
+                                                    <Grid container justifyContent="center"
                                                           alignItems="center"
                                                           style={{height: "100%"}}>
                                                         <Snooze style={{fontSize: 65, color: "white"}}/>

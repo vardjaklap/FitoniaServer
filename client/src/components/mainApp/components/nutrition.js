@@ -66,11 +66,11 @@ class Nutrition extends Component {
         return (
             <Fade in={this.state.checked} >
             <section id="Nutrition">
-                    <Grid container justify="center" style={{paddingTop: "20px"}}>
+                    <Grid container justifyContent="center" style={{paddingTop: "20px"}}>
                         <Grid item xs={10}>
                             { this.state.page === 0 ?
                                 <Fade in={this.state.page === 0}>
-                                    <NutrHistory></NutrHistory>
+                                    <NutrHistory> </NutrHistory>
                                 </Fade>
                                 : null }
                         </Grid>

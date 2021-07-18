@@ -12,7 +12,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
 import { ThemeProvider } from '@material-ui/core/styles';
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import { createTheme } from '@material-ui/core/styles';
 import amber from "@material-ui/core/colors/amber";
 import green from "@material-ui/core/colors/green";
 import grey from "@material-ui/core/colors/grey";
@@ -147,10 +147,10 @@ class NutrMain extends Component {
     render() {
         return (
             <section id="SleepHist" >
-                <Grid container style={{margin: "25px 0 60px"}} justify="space-evenly" alignItems="stretch" spacing={2}>
+                <Grid container style={{margin: "25px 0 60px"}} justifyContent="space-evenly" alignItems="stretch" spacing={2}>
                     <Grid item sm={6} md={4} lg={3}>
                         <ThemeProvider
-                            theme={createMuiTheme({
+                            theme={createTheme({
                                 palette: {
                                     primary: red,
                                     secondary: {
@@ -164,7 +164,7 @@ class NutrMain extends Component {
                                 <Box position="relative" display="inline-flex">
                                     <div >
                                         <CircularProgress
-                                            variant="static"
+                                            variant="determinate"
                                             value={100}
                                             color="secondary"
                                             size={150} thickness={4}
@@ -172,7 +172,7 @@ class NutrMain extends Component {
                                         <CircularProgress
                                             style={{position: 'absolute',
                                                 left: 0,}}
-                                            variant="static" value={this.state.dailyProgress.cal}   size={150} thickness={4} color="primary"
+                                            variant="determinate" value={this.state.dailyProgress.cal} size={150} thickness={4} color="primary"
                                         />
                                     </div>
                                     <Box
@@ -209,7 +209,7 @@ class NutrMain extends Component {
 
                     <Grid item sm={6} md={4} lg={3}>
                         <ThemeProvider
-                            theme={createMuiTheme({
+                            theme={createTheme({
                                 palette: {
                                     primary: amber,
                                     secondary: {
@@ -223,7 +223,7 @@ class NutrMain extends Component {
                                 <Box position="relative" display="inline-flex">
                                     <div >
                                         <CircularProgress
-                                            variant="static"
+                                            variant="determinate"
                                             value={100}
                                             color="secondary"
                                             size={150} thickness={4}
@@ -232,7 +232,7 @@ class NutrMain extends Component {
                                             style={{position: 'absolute',
                                                 left: 0,}}
 
-                                            variant="static" value={this.state.dailyProgress.fat}   size={150} thickness={4} color="primary"
+                                            variant="determinate" value={this.state.dailyProgress.fat}   size={150} thickness={4} color="primary"
                                         />
                                     </div>
                                     <Box
@@ -269,7 +269,7 @@ class NutrMain extends Component {
 
                     <Grid item sm={6} md={4} lg={3}>
                         <ThemeProvider
-                            theme={createMuiTheme({
+                            theme={createTheme({
                                 palette: {
                                     primary: green,
                                     secondary: {
@@ -283,7 +283,7 @@ class NutrMain extends Component {
                                     <Box position="relative" display="inline-flex">
                                         <div >
                                             <CircularProgress
-                                                variant="static"
+                                                variant="determinate"
                                                 value={100}
                                                 color="secondary"
                                                 size={150} thickness={4}
@@ -291,7 +291,7 @@ class NutrMain extends Component {
                                             <CircularProgress
                                                 style={{position: 'absolute',
                                                     left: 0,}}
-                                                variant="static" value={this.state.dailyProgress.carb}  size={150} thickness={4} color="primary"
+                                                variant="determinate" value={this.state.dailyProgress.carb}  size={150} thickness={4} color="primary"
                                             />
                                         </div>
                                         <Box
@@ -328,7 +328,7 @@ class NutrMain extends Component {
 
                     <Grid item sm={6} md={4} lg={3}>
                         <ThemeProvider
-                            theme={createMuiTheme({
+                            theme={createTheme({
                                 palette: {
                                     primary: blue,
                                     secondary: {
@@ -342,7 +342,7 @@ class NutrMain extends Component {
                                     <Box position="relative" display="inline-flex">
                                         <div >
                                             <CircularProgress
-                                                variant="static"
+                                                variant="determinate"
                                                 value={100}
                                                 color="secondary"
                                                 size={150} thickness={4}
@@ -350,7 +350,7 @@ class NutrMain extends Component {
                                             <CircularProgress
                                                 style={{position: 'absolute',
                                                     left: 0,}}
-                                                variant="static" value={this.state.dailyProgress.prot}  size={150} thickness={4} color="primary"
+                                                variant="determinate" value={this.state.dailyProgress.prot}  size={150} thickness={4} color="primary"
                                             />
                                         </div>
                                         <Box

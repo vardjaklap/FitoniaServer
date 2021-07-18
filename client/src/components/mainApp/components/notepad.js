@@ -72,7 +72,7 @@ class Notepad extends Component {
                 <section id="Nutrition" >
                     <Container>
                         <Grid container  direction="column"
-                              justify="center"
+                              justifyContent="center"
                               alignItems="center" style={{height: "80vh"}}>
                             <Grid item>
                                 <DateRangeIcon style={{fontSize: "300px"}} color="disabled" />

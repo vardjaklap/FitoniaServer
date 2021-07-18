@@ -140,9 +140,9 @@ class Profile extends Component {
             <Fade in={this.state.checked}>
                 <section id="Profile">
                     <Container>
-                        <Grid container justify="center">
+                        <Grid container justifyContent="center">
                             <Grid item xs={12}>
-                                <Grid container justify="center">
+                                <Grid container justifyContent="center">
                                     <Grid item xs={12} sm={6}>
                                         <Button variant="contained" color="primary" style={{height: "100px", width: "100%", marginTop: "20px"}} component={Link} to="/app/evaluation">
                                             The Evaluation

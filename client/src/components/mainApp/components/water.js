@@ -138,12 +138,12 @@ class Hydration extends Component {
         return (
             <Fade in={this.state.checked}>
                 <section id="Water" >
-                        <Grid container justify="center">
+                        <Grid container justifyContent="center">
                             { this.state.page === 0 ?
                                 <Fade in={this.state.page === 0} >
                                     <Grid item xs={12} sm={10} md={8}>
                                         <Paper style={styles.Paper}>
-                                            <Grid container justify="center" style={{padding: "25px 0"}}>
+                                            <Grid container justifyContent="center" style={{padding: "25px 0"}}>
                                                 <Grid item xs={12} md={6}>
                                                     <Typography style={{margin: '80px 0', fontSize: '3rem'}}>
                                                         {this.state.percent}%
@@ -152,8 +152,8 @@ class Hydration extends Component {
                                                     </LinearProgress>
                                                 </Grid>
                                                 <Grid item xs={12} md={6}>
-                                                    <Grid container justify="center" alignItems="center">
-                                                        <Grid container justify="space-around" style={{marginTop: 20}}>
+                                                    <Grid container justifyContent="center" alignItems="center">
+                                                        <Grid container justifyContent="space-around" style={{marginTop: 20}}>
                                                             <Button variant="contained" size="large" color="primary" style={styles.button} onClick={this.handle100}>
                                                                 100ML
                                                             </Button>
@@ -161,7 +161,7 @@ class Hydration extends Component {
                                                                 250ML
                                                             </Button>
                                                         </Grid>
-                                                        <Grid container  justify="space-around" style={{marginTop: 50}}>
+                                                        <Grid container  justifyContent="space-around" style={{marginTop: 50}}>
                                                             <Button variant="contained" size="large" color="primary" style={styles.button} onClick={this.handle500}>
                                                                 500ML
                                                             </Button>
@@ -169,7 +169,7 @@ class Hydration extends Component {
                                                                 1L
                                                             </Button>
                                                         </Grid>
-                                                        <Grid container  justify="center" style={{marginTop: 30}}>
+                                                        <Grid container  justifyContent="center" style={{marginTop: 30}}>
                                                             <TextField
                                                                 id="waterMl"
                                                                 name="ml"
@@ -184,7 +184,7 @@ class Hydration extends Component {
                                                                 <AddIcon />
                                                             </Fab>
                                                         </Grid>
-                                                        {/*<Grid container  justify="space-around">*/}
+                                                        {/*<Grid container  justifyContent="space-around">*/}
                                                         {/*    <Fab color="primary" aria-label="Add" onClick={this.handleCustom}>*/}
                                                         {/*        <AddIcon />*/}
                                                         {/*    </Fab>*/}
@@ -201,7 +201,7 @@ class Hydration extends Component {
                                     <div>
                                         <Container>
                                             <Grid container  direction="column"
-                                                  justify="center"
+                                                  justifyContent="center"
                                                   alignItems="center" style={{height: "80vh"}}>
                                                 <Grid item>
                                                     <Opacity style={{fontSize: "300px"}} color="disabled" />

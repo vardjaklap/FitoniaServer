@@ -143,7 +143,7 @@ class Evaluation extends Component {
                 <Fade in={true}>
                     <section id="Evaluation" style={{textAlign: "left"}}>
                         <Container>
-                            <Grid container justify="center" alignItems="center" style={{minHeight: "70vh"}}>
+                            <Grid container justifyContent="center" alignItems="center" style={{minHeight: "70vh"}}>
                                 <Grid item>
                                     <Grow in={this.state.evalTurn === 0} mountOnEnter unmountOnExit>
                                         <Card style={{maxWidth: "450px", minWidth: "300px"}}>
@@ -157,7 +157,7 @@ class Evaluation extends Component {
                                                 subheader="Step 1/3"
                                             />
                                             <CardContent style={{paddingTop: 0, paddingBottom: 0}}>
-                                                <Grid container direction="column" justify="flex-start" alignItems="stretch" spacing={3}>
+                                                <Grid container direction="column" justifyContent="flex-start" alignItems="stretch" spacing={3}>
                                                     <Grid item >
                                                         <FormControl component="fieldset">
                                                             <FormLabel component="legend">Please select your gender</FormLabel>
@@ -185,7 +185,7 @@ class Evaluation extends Component {
                                                 </Grid>
                                             </CardContent>
                                             <CardActions disableSpacing>
-                                                <Grid container justify="flex-end">
+                                                <Grid container justifyContent="flex-end">
                                                     <Button size="small" color="primary" onClick={this.handleNextCard}>
                                                         Next
                                                     </Button>
@@ -205,7 +205,7 @@ class Evaluation extends Component {
                                                 subheader="Step 2/3"
                                             />
                                             <CardContent style={{paddingTop: 0, paddingBottom: 0}}>
-                                                <Grid container direction="column" justify="flex-start" alignItems="stretch" spacing={3}>
+                                                <Grid container direction="column" justifyContent="flex-start" alignItems="stretch" spacing={3}>
                                                     <Grid item>
                                                         <FormLabel  component="legend">Please select your height (in centimeters):</FormLabel>
                                                     </Grid>
@@ -237,7 +237,7 @@ class Evaluation extends Component {
                                                 </Grid>
                                             </CardContent>
                                             <CardActions disableSpacing>
-                                                <Grid container justify="flex-end">
+                                                <Grid container justifyContent="flex-end">
                                                     <Button size="small" color="primary" onClick={this.handleNextCard}>
                                                         Next
                                                     </Button>
@@ -257,7 +257,7 @@ class Evaluation extends Component {
                                                 subheader="Step 3/3"
                                             />
                                             <CardContent style={{paddingTop: 0, paddingBottom: 0}}>
-                                                <Grid container direction="column" justify="flex-start" alignItems="stretch" spacing={3}>
+                                                <Grid container direction="column" justifyContent="flex-start" alignItems="stretch" spacing={3}>
                                                     <Grid item>
                                                         <FormLabel  component="legend">How many times per week do you work out?</FormLabel>
                                                     </Grid>
@@ -287,7 +287,7 @@ class Evaluation extends Component {
                                                 </Grid>
                                             </CardContent>
                                             <CardActions disableSpacing>
-                                                <Grid container justify="flex-end">
+                                                <Grid container justifyContent="flex-end">
                                                     <Button size="small" color="primary" onClick={this.finish}>
                                                         Done
                                                     </Button>

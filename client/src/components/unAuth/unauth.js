@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import RegistrationPage from './registrationpage'
 import Login from './login'
 import FrontPage from './frontpage'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import red from "@material-ui/core/colors/red";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
@@ -11,7 +11,7 @@ class Unauth extends Component {
     constructor(props) {
         super(props);
         this.state = {
-                theme: createMuiTheme({
+                theme: createTheme({
                     palette: {
                         primary: {main: red[400]}
                     },

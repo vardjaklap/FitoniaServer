@@ -42,7 +42,7 @@ class NewFood extends Component {
                 <Fade in={true}>
                     <section id="Evaluation" style={{textAlign: "left"}}>
                         <Container>
-                            <Grid container justify="center"  style={{minHeight: "70vh"}}>
+                            <Grid container justifyContent="center"  style={{minHeight: "70vh"}}>
                                 <Grid item xs={12} sm={10} md={8}>
                                     <Typography variant="h5" gutterBottom>
                                         Add new food item

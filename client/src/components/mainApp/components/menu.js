@@ -94,7 +94,7 @@ class Nav extends Component {
                         >
                             <DrawerTest userData={this.props.userData} selTest={this.props.title}></DrawerTest>
                         </div>
-                        <Typography variant="caption" fontWeight="fontWeightLight"  style={{position: "absolute", bottom: 0, margin: 10}}> v. ALPHA 0.1.3</Typography>
+                        <Typography variant="caption" fontWeight="fontWeightLight"  style={{position: "absolute", bottom: 0, margin: 10}}> v. ALPHA 0.2.0</Typography>
                     </Drawer>
                     <AppBar position="static" style={this.state.appBarStyle}>
                             {this.state.profile ? <Toolbar>

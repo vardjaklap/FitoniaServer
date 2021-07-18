@@ -107,9 +107,9 @@ class FoodBase extends Component {
     render() {
         return (
             <section id="foodBase">
-                <Grid container justify="center" scroll="body">
+                <Grid container justifyContent="center" scroll="body">
                     {/*<Grid item xs={12} sm={10}>*/}
-                    {/*    <Grid container justify="space-evenly">*/}
+                    {/*    <Grid container justifyContent="space-evenly">*/}
                     {/*        <Tooltip title="Meat" arrow>*/}
                     {/*            <div className="box">*/}
                     {/*                <IconButton style={{height: "75px", width: "75px"}} color="primary">*/}
@@ -177,7 +177,7 @@ class FoodBase extends Component {
                         </Paper>
                     </Grid>
                     <Grid item id="searchResults" style={{margin: "40px 0 70px"}}>
-                        <Grid container justify="space-evenly" spacing={3} alignItems="stretch" >
+                        <Grid container justifyContent="space-evenly" spacing={3} alignItems="stretch" >
                             {this.state.searchResults.map((item) =>
                                 <Grid key={item.id} item xs={12} sm={5} md={4}>
                                     <Grow in unmountOnExit mountOnEnter>
