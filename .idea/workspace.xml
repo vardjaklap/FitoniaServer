@@ -40,30 +40,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="Added new muscle selection menu for training. Small bug fixes.">
+    <list default="true" id="28faffd4-a043-444a-b29e-45a6f91f326a" name="Default Changelist" comment="New svg for hydration. Small animation adjustments.">
+      <change afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/waterComponents/waterSvgSilhouette.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/eval.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/eval.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/layouts/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/layouts/drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/meditation.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/meditation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/notepad.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/notepad.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutrition.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutrition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/foodBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/foodBase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrHistory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/nutritionComponents/nutrMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/sleep.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/sleep.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/tools/createNewFood.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/tools/createNewFood.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/training.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/components/water.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/mainApp/mainApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/frontpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/registrationpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/registrationpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/unAuth/unauth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/unAuth/unauth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +77,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -237,8 +217,18 @@
       <workItem from="1626557224786" duration="814000" />
       <workItem from="1626558063699" duration="3687000" />
       <workItem from="1626628522687" duration="3102000" />
-      <workItem from="1626631661048" duration="108000" />
+      <workItem from="1626631661048" duration="1591000" />
+      <workItem from="1626643938890" duration="3914000" />
+      <workItem from="1626724495433" duration="57000" />
     </task>
+    <task id="LOCAL-00001" summary="Added new muscle selection menu for training. &#10;Meditation update.&#10;Updated packages (in progress).&#10;Small bug fixes.">
+      <created>1626631847538</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626631847538</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,16 +251,23 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/client" />
     </ignored-roots>
+    <MESSAGE value="Added new muscle selection menu for training. &#10;Meditation update.&#10;Updated packages (in progress).&#10;Small bug fixes." />
+    <MESSAGE value="New svg for hydration. Small animation adjustments." />
+    <option name="LAST_COMMIT_MESSAGE" value="New svg for hydration. Small animation adjustments." />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="281" key="#Notifications" timestamp="1626558071387">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state x="524" y="281" key="#Notifications/0.0.1536.920@0.0.1536.920" timestamp="1626558071387" />
-    <state x="391" y="0" key="CommitChangelistDialog2" timestamp="1626631710608">
+    <state x="503" y="251" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1626644315703">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state x="391" y="0" key="CommitChangelistDialog2/0.0.1536.920@0.0.1536.920" timestamp="1626631710608" />
+    <state x="503" y="251" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.920@0.0.1536.920" timestamp="1626644315703" />
+    <state x="391" y="0" width="825" height="619" key="CommitChangelistDialog2" timestamp="1626724533233">
+      <screen x="0" y="0" width="1536" height="920" />
+    </state>
+    <state x="391" y="0" width="825" height="619" key="CommitChangelistDialog2/0.0.1536.920@0.0.1536.920" timestamp="1626724533233" />
     <state width="1515" height="236" key="GridCell.Tab.0.bottom" timestamp="1626557657015">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
@@ -291,6 +288,10 @@
     </state>
     <state width="1513" height="239" key="GridCell.Tab.0.right/0.0.1536.920/-2560.485.1463.783@0.0.1536.920" timestamp="1620335841981" />
     <state width="1515" height="236" key="GridCell.Tab.0.right/0.0.1536.920@0.0.1536.920" timestamp="1626557657015" />
+    <state x="362" y="190" key="Vcs.Push.Dialog.v2" timestamp="1626631858348">
+      <screen x="0" y="0" width="1536" height="920" />
+    </state>
+    <state x="362" y="190" key="Vcs.Push.Dialog.v2/0.0.1536.920@0.0.1536.920" timestamp="1626631858348" />
     <state x="587" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626631232445">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
@@ -299,6 +300,10 @@
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state x="479" y="36" width="579" height="849" key="find.popup/0.0.1536.920@0.0.1536.920" timestamp="1626630228656" />
+    <state x="431" y="196" width="672" height="678" key="search.everywhere.popup" timestamp="1626651933801">
+      <screen x="0" y="0" width="1536" height="920" />
+    </state>
+    <state x="431" y="196" width="672" height="678" key="search.everywhere.popup/0.0.1536.920/-2560.232.1463.783@0.0.1536.920" timestamp="1626651933801" />
   </component>
   <component name="masterDetails">
     <states>

@@ -12,6 +12,7 @@ import Button from '@material-ui/core/Button';
 import TextField from "@material-ui/core/TextField";
 import Fab from "@material-ui/core/Fab";
 import WaterHistory from './waterComponents/waterHistory'
+import WaterSilhouette from "./waterComponents/waterSvgSilhouette";
 import { LinearProgress } from '@material-ui/core';
 import amber from '@material-ui/core/colors/amber'
 import Container from "@material-ui/core/Container";
@@ -145,9 +146,10 @@ class Hydration extends Component {
                                         <Paper style={styles.Paper}>
                                             <Grid container justifyContent="center" style={{padding: "25px 0"}}>
                                                 <Grid item xs={12} md={6}>
-                                                    <Typography style={{margin: '80px 0', fontSize: '3rem'}}>
+                                                    <WaterSilhouette percent={this.state.percent}/>
+                                                    {/*<Typography style={{ fontSize: '3rem'}}>
                                                         {this.state.percent}%
-                                                    </Typography>
+                                                    </Typography>*/}
                                                     <LinearProgress variant="determinate" value={this.state.percent} style={{height: '30px', colorSecondary: amber[400]}} color={'primary'}>
                                                     </LinearProgress>
                                                 </Grid>
